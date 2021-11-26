@@ -25,10 +25,17 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@dxc-technology/halstack-angular/lib/assets",
+                "output": "./assets/"
+            }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/@dxc-technology/halstack-angular/lib/styles/themes/theme.scss"
+
             ],
             "scripts": []
           },

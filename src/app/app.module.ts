@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DxcButtonModule, ThemeDirective, ThemeModule, ThemeService } from '@dxc-technology/halstack-angular';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CommonModule,
+    AppRoutingModule,
+    DxcButtonModule,
+    ThemeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
