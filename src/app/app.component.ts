@@ -1,21 +1,15 @@
-import { Component } from '@angular/core';
-import { ThemeDirective } from '@dxc-technology/halstack-angular';
+import { Component, Inject } from '@angular/core';
+import { ThemeDirective, ThemeService } from '@dxc-technology/halstack-angular';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  viewProviders: [ThemeDirective]
-
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
 
-  constructor(){}
+  constructor() {}
 
   title = 'boiler-plate';
 
-  onClick = (event) => {
-
-    console.log(event);
-  }
 }
