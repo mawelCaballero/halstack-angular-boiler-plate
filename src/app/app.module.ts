@@ -6,6 +6,7 @@ import { DxcButtonModule, ThemeModule, ThemeService } from '@dxc-technology/hals
 import { CommonModule } from '@angular/common';
 import { ButtonModesComponent } from './button/button-modes/button-modes.component';
 import { ButtonWithIconComponent } from './button/button-with-icon/button-with-icon.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ButtonWithIconComponent } from './button/button-with-icon/button-with-i
   imports: [
     BrowserModule,
     CommonModule,
+    RouterModule,
     AppRoutingModule,
     DxcButtonModule,
     ThemeModule

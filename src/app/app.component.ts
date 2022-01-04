@@ -1,5 +1,4 @@
-import { Component, Inject } from '@angular/core';
-import { ThemeDirective, ThemeService } from '@dxc-technology/halstack-angular';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
