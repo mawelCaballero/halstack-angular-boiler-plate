@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
 import { ButtonModesComponent } from './button/button-modes/button-modes.component';
 import { ButtonWithIconComponent } from './button/button-with-icon/button-with-icon.component';
 
