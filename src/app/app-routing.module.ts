@@ -107,6 +107,19 @@ import { BasicTagComponent } from './views/tag/basic-tag/basic-tag.component';
 import { SizedTagComponent } from './views/tag/sized-tag/sized-tag.component';
 import { TagWithIconComponent } from './views/tag/tag-with-icon/tag-with-icon.component';
 import { TagWithLinkComponent } from './views/tag/tag-with-link/tag-with-link.component';
+import { ControlledInputComponent } from './views/text-input/controlled-input/controlled-input.component';
+import { DisabledInputComponent } from './views/text-input/disabled-input/disabled-input.component';
+import { InputWithActionComponent } from './views/text-input/input-with-action/input-with-action.component';
+import { InputWithCustomErrorComponent } from './views/text-input/input-with-custom-error/input-with-custom-error.component';
+import { InputWithHelperTextComponent } from './views/text-input/input-with-helper-text/input-with-helper-text.component';
+import { InputWithLengthConstraintComponent } from './views/text-input/input-with-length-constraint/input-with-length-constraint.component';
+import { InputWithPatternConstraintComponent } from './views/text-input/input-with-pattern-constraint/input-with-pattern-constraint.component';
+import { InputWithPlaceholderComponent } from './views/text-input/input-with-placeholder/input-with-placeholder.component';
+import { InputWithPrefixComponent } from './views/text-input/input-with-prefix/input-with-prefix.component';
+import { InputWithSuffixComponent } from './views/text-input/input-with-suffix/input-with-suffix.component';
+import { InvalidInputComponent } from './views/text-input/invalid-input/invalid-input.component';
+import { OptionalInputComponent } from './views/text-input/optional-input/optional-input.component';
+import { UncontrolledInputComponent } from './views/text-input/uncontrolled-input/uncontrolled-input.component';
 
 let routes: Routes = [];
 routes.push({ path: '', redirectTo: 'buttonModes', pathMatch: 'full' });
@@ -268,6 +281,24 @@ routes.push({ path:'basic-tag', component: BasicTagComponent});
 routes.push({ path:'sized-tag', component: SizedTagComponent});
 routes.push({ path:'tag-with-icon', component: TagWithIconComponent});
 routes.push({ path:'tag-with-link', component: TagWithLinkComponent});
+
+//TextInput
+routes.push({ path:'controlled-input', component: ControlledInputComponent});
+routes.push({ path:'disabled-input', component: DisabledInputComponent});
+routes.push({ path: 'fill-parent-size-input', component: FillParentSizeInputComponent});
+routes.push({ path: 'input-with-action', component: InputWithActionComponent});
+routes.push({ path: 'input-with-custom-error', component: InputWithCustomErrorComponent});
+routes.push({ path: 'input-with-helper-text', component:InputWithHelperTextComponent});
+routes.push({ path: 'input-with-length-constraint', component: InputWithLengthConstraintComponent});
+routes.push({ path: 'input-with-pattern-constraint', component: InputWithPatternConstraintComponent});
+routes.push({ path: 'input-with-placeholder', component: InputWithPlaceholderComponent});
+routes.push({ path: 'input-with-prefix', component: InputWithPrefixComponent});
+routes.push({ path: 'input-with-suffix', component: InputWithSuffixComponent});
+routes.push({ path: 'invalid-input', component: InvalidInputComponent});
+routes.push({ path: 'optional-input', component: OptionalInputComponent});
+routes.push({ path: 'uncontrolled-input', component: UncontrolledInputComponent});
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,{ useHash: true })],

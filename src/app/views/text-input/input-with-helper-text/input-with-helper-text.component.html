@@ -1,1 +1,10 @@
-<p>input-with-helper-text works!</p>
+<div theme>
+  <dxc-text-input
+    [value]="controlledValue"
+    (onChange)="onChange($event)"
+    (onBlur)="onBlur($event)"
+    helperText="Helper text"
+    margin="medium"
+    clearable="true"
+  ></dxc-text-input>
+</div>

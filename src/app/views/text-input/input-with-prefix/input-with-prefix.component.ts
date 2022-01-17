@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-input-with-prefix',
+  selector: 'app-root',
   templateUrl: './input-with-prefix.component.html',
   styleUrls: ['./input-with-prefix.component.scss']
 })
 export class InputWithPrefixComponent implements OnInit {
 
-  constructor() { }
+  controlledValue = "";
+
+  constructor() {}
 
   ngOnInit(): void {
   }
 
+  onBlur({ value, error }) {
+    this.controlledValue = value;
+  }
+
+  onChange({ value, error }) {
+    this.controlledValue = value;
+  }
 }

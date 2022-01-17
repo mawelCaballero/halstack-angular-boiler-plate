@@ -33,6 +33,7 @@ import { TabbedSectionModule } from './views/tabbed-section/tabbed-section.modul
 import { TableModule } from './views/table/table.module';
 import { TabsModule } from './views/tabs/tabs.module';
 import { TagModule } from './views/tag/tag.module';
+import { TextInputModule } from './views/text-input/text-input.module';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { TagModule } from './views/tag/tag.module';
     TableModule,
     TabsModule,
     TagModule,
+    TextInputModule,
     ThemeModule
   ],
   providers: [ { provide: 'ThemeService', useClass: ThemeService }],

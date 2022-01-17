@@ -1,1 +1,11 @@
-<p>fill-parent-size-input works!</p>
+<div theme>
+  <dxc-text-input
+    label="Fill parent"
+    [value]="controlledValue"
+    (onChange)="onChange($event)"
+    (onBlur)="onBlur($event)"
+    margin="medium"
+    clearable="true"
+    size="fillParent"
+  ></dxc-text-input>
+</div>

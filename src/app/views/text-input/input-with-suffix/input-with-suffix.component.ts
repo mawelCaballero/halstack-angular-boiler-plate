@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-input-with-suffix',
+  selector: 'app-root',
   templateUrl: './input-with-suffix.component.html',
   styleUrls: ['./input-with-suffix.component.scss']
 })
 export class InputWithSuffixComponent implements OnInit {
 
-  constructor() { }
+  controlledValue = "";
+
+  constructor() {}
 
   ngOnInit(): void {
+  }
+
+  onBlur({ value, error }) {
+    this.controlledValue = value;
+  }
+
+  onChange({ value, error }) {
+    this.controlledValue = value;
   }
 
 }
