@@ -22,7 +22,7 @@
     "@angular/platform-browser": "10.2.0",
     "@angular/platform-browser-dynamic": "10.2.0",
     "@angular/router": "10.2.0",
-    "@dxc-technology/halstack-angular": "0.0.0-ef68f59",
+    "@dxc-technology/halstack-angular": "0.0.0-7eee69b",
     "emotion": "10.0.27",
     "jest": "^24.9.0",
     "jest-preset-angular": "^7.1.1",

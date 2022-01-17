@@ -1,0 +1,11 @@
+<div theme>
+  <dxc-tabs margin="small">
+    <div *ngFor="let currenttab of (tabs | async); let i = index;">
+      <dxc-tab [label]="currenttab.id">
+        <div id="content1">{{currenttab.content}}</div>
+      </dxc-tab>
+    </div>
+  </dxc-tabs>
+  <dxc-button label="Add new tab" (click)="addMoreTabs()"></dxc-button>
+
+</div>
