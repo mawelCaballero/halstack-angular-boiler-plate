@@ -102,6 +102,11 @@ import { AddTabsDynamicallyComponent } from './views/tabs/add-tabs-dynamically/a
 import { ControlledTabsComponent } from './views/tabs/controlled-tabs/controlled-tabs.component';
 import { TabsWithContentComponent } from './views/tabs/tabs-with-content/tabs-with-content.component';
 import { UncontrolledTabsComponent } from './views/tabs/uncontrolled-tabs/uncontrolled-tabs.component';
+import { BasicTagModule } from './views/tag/basic-tag/basic-tag.module';
+import { BasicTagComponent } from './views/tag/basic-tag/basic-tag.component';
+import { SizedTagComponent } from './views/tag/sized-tag/sized-tag.component';
+import { TagWithIconComponent } from './views/tag/tag-with-icon/tag-with-icon.component';
+import { TagWithLinkComponent } from './views/tag/tag-with-link/tag-with-link.component';
 
 let routes: Routes = [];
 routes.push({ path: '', redirectTo: 'buttonModes', pathMatch: 'full' });
@@ -257,6 +262,12 @@ routes.push({ path:'add-tabs-dynamically', component: AddTabsDynamicallyComponen
 routes.push({ path:'controlled-tabs', component: ControlledTabsComponent});
 routes.push({ path:'tabs-with-content', component: TabsWithContentComponent});
 routes.push({ path:'uncontrolled-tabs', component: UncontrolledTabsComponent});
+
+//Tags
+routes.push({ path:'basic-tag', component: BasicTagComponent});
+routes.push({ path:'sized-tag', component: SizedTagComponent});
+routes.push({ path:'tag-with-icon', component: TagWithIconComponent});
+routes.push({ path:'tag-with-link', component: TagWithLinkComponent});
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,{ useHash: true })],

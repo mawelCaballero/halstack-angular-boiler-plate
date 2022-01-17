@@ -32,6 +32,7 @@ import { SwitchModule } from './views/switch/switch.module';
 import { TabbedSectionModule } from './views/tabbed-section/tabbed-section.module';
 import { TableModule } from './views/table/table.module';
 import { TabsModule } from './views/tabs/tabs.module';
+import { TagModule } from './views/tag/tag.module';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { TabsModule } from './views/tabs/tabs.module';
     TabbedSectionModule,
     TableModule,
     TabsModule,
+    TagModule,
     ThemeModule
   ],
   providers: [ { provide: 'ThemeService', useClass: ThemeService }],
