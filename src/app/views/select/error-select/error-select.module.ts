@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ErrorSelectComponent } from './error-select.component';
+import { DxcSelectModule, ThemeModule } from '@dxc-technology/halstack-angular';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ErrorSelectComponent],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    ThemeModule,
+    DxcSelectModule
+  ], exports: [ErrorSelectComponent]
 })
 export class ErrorSelectModule { }
