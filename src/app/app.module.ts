@@ -44,15 +44,12 @@ import { SelectModule } from './views/select/select.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ButtonModesComponent
-  ],
+    AppComponent  ],
   imports: [
     BrowserModule,
     CommonModule,
     RouterModule,
     AppRoutingModule,
-    DxcButtonModule,
     ButtonModule,
     DateModule,
     DateInputModule,
