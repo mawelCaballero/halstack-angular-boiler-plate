@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DefaultResultsetTableComponent } from './default-resultset-table.component';
-import { ThemeModule, DxcResultsetTableModule } from '@dxc-technology/halstack-angular';
+import { ThemeModule, DxcResultsetTableModule, DxcButtonModule } from '@dxc-technology/halstack-angular';
 
 
 
@@ -10,6 +10,7 @@ import { ThemeModule, DxcResultsetTableModule } from '@dxc-technology/halstack-a
   imports: [
     CommonModule,
     ThemeModule,
+    DxcButtonModule,
     DxcResultsetTableModule
   ],exports: [DefaultResultsetTableComponent]
 })
