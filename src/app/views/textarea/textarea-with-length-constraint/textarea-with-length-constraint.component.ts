@@ -1,15 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-textarea-with-length-constraint',
+  selector: 'app-root',
   templateUrl: './textarea-with-length-constraint.component.html',
   styleUrls: ['./textarea-with-length-constraint.component.scss']
 })
 export class TextareaWithLengthConstraintComponent implements OnInit {
 
-  constructor() { }
+  length = { min: 5, max: 10 };
+  value = "";
+
+  constructor() {}
 
   ngOnInit(): void {
+  }
+
+  onChange(event) {
+    this.value = event;
+  }
+
+  onBlur({ value, error }) {
+    this.value = value;
   }
 
 }

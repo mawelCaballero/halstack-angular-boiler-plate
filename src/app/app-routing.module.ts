@@ -120,6 +120,42 @@ import { InputWithSuffixComponent } from './views/text-input/input-with-suffix/i
 import { InvalidInputComponent } from './views/text-input/invalid-input/invalid-input.component';
 import { OptionalInputComponent } from './views/text-input/optional-input/optional-input.component';
 import { UncontrolledInputComponent } from './views/text-input/uncontrolled-input/uncontrolled-input.component';
+import { ControlledTextareaComponent } from './views/textarea/controlled-textarea/controlled-textarea.component';
+import { DisabledTextareaComponent } from './views/textarea/disabled-textarea/disabled-textarea.component';
+import { FillParentSizeTextareaComponent } from './views/textarea/fill-parent-size-textarea/fill-parent-size-textarea.component';
+import { InvalidTextareaComponent } from './views/textarea/invalid-textarea/invalid-textarea.component';
+import { OptionalTextareaComponent } from './views/textarea/optional-textarea/optional-textarea.component';
+import { TextareaVertialgrowManualComponent } from './views/textarea/textarea-vertialgrow-manual/textarea-vertialgrow-manual.component';
+import { TextareaVertialgrowNoneComponent } from './views/textarea/textarea-vertialgrow-none/textarea-vertialgrow-none.component';
+import { TextareaWithCustomErrorComponent } from './views/textarea/textarea-with-custom-error/textarea-with-custom-error.component';
+import { TextareaWithDefaultRowsComponent } from './views/textarea/textarea-with-default-rows/textarea-with-default-rows.component';
+import { TextareaWithHelperTextComponent } from './views/textarea/textarea-with-helper-text/textarea-with-helper-text.component';
+import { TextareaWithLengthConstraintComponent } from './views/textarea/textarea-with-length-constraint/textarea-with-length-constraint.component';
+import { TextareaWithPatternConstraintComponent } from './views/textarea/textarea-with-pattern-constraint/textarea-with-pattern-constraint.component';
+import { TextareaWithPlaceholderComponent } from './views/textarea/textarea-with-placeholder/textarea-with-placeholder.component';
+import { UncontrolledTextareaComponent } from './views/textarea/uncontrolled-textarea/uncontrolled-textarea.component';
+import { BasicToggleGroupComponent } from './views/toggle-group/basic-toggle-group/basic-toggle-group.component';
+import { ControlledToggleGroupComponent } from './views/toggle-group/controlled-toggle-group/controlled-toggle-group.component';
+import { DisabledToggleGroupComponent } from './views/toggle-group/disabled-toggle-group/disabled-toggle-group.component';
+import { MultipleToggleGroupComponent } from './views/toggle-group/multiple-toggle-group/multiple-toggle-group.component';
+import { DefaultUploadComponent } from './views/uplodad/default-upload/default-upload.component';
+import { V3ControlledSelectComponent } from './views/v3-select/v3-controlled-select/v3-controlled-select.component';
+import { V3MultipleSelectComponent } from './views/v3-select/v3-multiple-select/v3-multiple-select.component';
+import { V3SizedSelectComponent } from './views/v3-select/v3-sized-select/v3-sized-select.component';
+import { V3UncontrolledSelectComponent } from './views/v3-select/v3-uncontrolled-select/v3-uncontrolled-select.component';
+import { V3WithIconsSelectComponent } from './views/v3-select/v3-with-icons-select/v3-with-icons-select.component';
+import { V3ControlledTextareaComponent } from './views/v3-textarea/v3-controlled-textarea/v3-controlled-textarea.component';
+import { V3DisabledTextareaComponent } from './views/v3-textarea/v3-disabled-textarea/v3-disabled-textarea.component';
+import { V3FillParentTextareaComponent } from './views/v3-textarea/v3-fill-parent-textarea/v3-fill-parent-textarea.component';
+import { V3InvalidTextareaComponent } from './views/v3-textarea/v3-invalid-textarea/v3-invalid-textarea.component';
+import { V3RequiredTextareaComponent } from './views/v3-textarea/v3-required-textarea/v3-required-textarea.component';
+import { V3UncontrolledTextareaComponent } from './views/v3-textarea/v3-uncontrolled-textarea/v3-uncontrolled-textarea.component';
+import { DefaultSelectComponent } from './views/select/default-select/default-select.component';
+import { DisabledSelectComponent } from './views/select/disabled-select/disabled-select.component';
+import { ErrorMultipleSelectComponent } from './views/select/error-multiple-select/error-multiple-select.component';
+import { ErrorSelectComponent } from './views/select/error-select/error-select.component';
+import { MultipleSelectComponent } from './views/select/multiple-select/multiple-select.component';
+import { SearchableSelectComponent } from './views/select/searchable-select/searchable-select.component';
 
 let routes: Routes = [];
 routes.push({ path: '', redirectTo: 'buttonModes', pathMatch: 'full' });
@@ -298,7 +334,53 @@ routes.push({ path: 'invalid-input', component: InvalidInputComponent});
 routes.push({ path: 'optional-input', component: OptionalInputComponent});
 routes.push({ path: 'uncontrolled-input', component: UncontrolledInputComponent});
 
+//TextArea
+routes.push({ path: 'controlled-textarea', component: ControlledTextareaComponent});
+routes.push({ path: 'disabled-textarea', component: DisabledTextareaComponent});
+routes.push({ path: 'fill-parent-size-textarea', component: FillParentSizeTextareaComponent});
+routes.push({ path: 'invalid-textarea', component: InvalidTextareaComponent});
+routes.push({ path: 'optional-textarea', component: OptionalTextareaComponent});
+routes.push({ path: 'textarea-vertical-grow-manual', component: TextareaVertialgrowManualComponent});
+routes.push({ path: 'textarea-vertical-grow-none', component: TextareaVertialgrowNoneComponent});
+routes.push({ path: 'textarea-with-custom-error', component: TextareaWithCustomErrorComponent});
+routes.push({ path: 'textarea-with-default-rows', component: TextareaWithDefaultRowsComponent});
+routes.push({ path: 'textarea-with-helper-text', component: TextareaWithHelperTextComponent});
+routes.push({ path: 'textarea-with-length-constraint', component: TextareaWithLengthConstraintComponent});
+routes.push({ path: 'textarea-with-pattern-constraint', component: TextareaWithPatternConstraintComponent});
+routes.push({ path: 'textarea-with-placeholder', component: TextareaWithPlaceholderComponent});
+routes.push({ path: 'uncontrolled-textarea', component: UncontrolledTextareaComponent});
 
+//Toogle-Group
+routes.push({ path: 'basic-toogle-group', component: BasicToggleGroupComponent});
+routes.push({ path: 'controlled-toggle-group', component: ControlledToggleGroupComponent});
+routes.push({ path: 'disabled-toggle-group', component: DisabledToggleGroupComponent});
+routes.push({ path: 'multiple-toggle-group', component: MultipleToggleGroupComponent});
+
+//Upload
+routes.push({ path: 'default-upload', component: DefaultUploadComponent});
+
+//V3 Select
+routes.push({ path: 'v3-controlled-select', component: V3ControlledSelectComponent});
+routes.push({ path: 'v3-multiple-select', component: V3MultipleSelectComponent});
+routes.push({ path: 'v3-sized-select', component: V3SizedSelectComponent});
+routes.push({ path: 'v3-uncontrolled-select', component: V3UncontrolledSelectComponent});
+routes.push({ path: 'v3-with-icons-select', component: V3WithIconsSelectComponent});
+
+//V3 Textarea
+routes.push({ path: 'v3-controlled-textarea', component: V3ControlledTextareaComponent});
+routes.push({ path: 'v3-disabled-textarea', component: V3DisabledTextareaComponent});
+routes.push({ path: 'v3-fill-parent-textarea', component: V3FillParentTextareaComponent});
+routes.push({ path: 'v3-invalid-textarea', component: V3InvalidTextareaComponent});
+routes.push({ path: 'v3-required-textarea', component: V3RequiredTextareaComponent});
+routes.push({ path: 'v3-uncontrolled-textarea', component: V3UncontrolledTextareaComponent});
+
+//Select
+routes.push({ path: 'default-select', component: DefaultSelectComponent});
+routes.push({ path: 'disabled-select', component: DisabledSelectComponent});
+routes.push({ path: 'error-multiple-select', component: ErrorMultipleSelectComponent});
+routes.push({ path: 'error-select', component: ErrorSelectComponent});
+routes.push({ path: 'multiple-select', component: MultipleSelectComponent});
+routes.push({ path: 'searchable-select', component: SearchableSelectComponent});
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,{ useHash: true })],

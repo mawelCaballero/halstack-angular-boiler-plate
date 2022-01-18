@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { V3ControlledTextareaComponent } from './v3-controlled-textarea/v3-controlled-textarea.component';
-import { V3UncontrolledTextareaComponent } from './v3-uncontrolled-textarea/v3-uncontrolled-textarea.component';
-import { V3DisabledTextareaComponent } from './v3-disabled-textarea/v3-disabled-textarea.component';
-import { V3InvalidTextareaComponent } from './v3-invalid-textarea/v3-invalid-textarea.component';
-import { V3RequiredTextareaComponent } from './v3-required-textarea/v3-required-textarea.component';
-import { V3FillParentTextareaComponent } from './v3-fill-parent-textarea/v3-fill-parent-textarea.component';
-
-
+import { V3ControlledTextareaModule } from './v3-controlled-textarea/v3-controlled-textarea.module';
+import { V3UncontrolledTextareaModule } from './v3-uncontrolled-textarea/v3-uncontrolled-textarea.module';
+import { V3DisabledTextareaModule } from './v3-disabled-textarea/v3-disabled-textarea.module';
+import { V3InvalidTextareaModule } from './v3-invalid-textarea/v3-invalid-textarea.module';
+import { V3RequiredTextareaModule } from './v3-required-textarea/v3-required-textarea.module';
+import { V3FillParentTextareaModule } from './v3-fill-parent-textarea/v3-fill-parent-textarea.module';
 
 @NgModule({
-  declarations: [V3ControlledTextareaComponent, V3UncontrolledTextareaComponent, V3DisabledTextareaComponent, V3InvalidTextareaComponent, V3RequiredTextareaComponent, V3FillParentTextareaComponent],
+  declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    V3ControlledTextareaModule,
+    V3UncontrolledTextareaModule,
+    V3DisabledTextareaModule,
+    V3InvalidTextareaModule,
+    V3RequiredTextareaModule,
+    V3FillParentTextareaModule
   ]
 })
 export class V3TextareaModule { }

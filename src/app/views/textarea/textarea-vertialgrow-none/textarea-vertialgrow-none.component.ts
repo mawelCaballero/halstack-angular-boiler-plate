@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-textarea-vertialgrow-none',
+  selector: 'app-root',
   templateUrl: './textarea-vertialgrow-none.component.html',
   styleUrls: ['./textarea-vertialgrow-none.component.scss']
 })

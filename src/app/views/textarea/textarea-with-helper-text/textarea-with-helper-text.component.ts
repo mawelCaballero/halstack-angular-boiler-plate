@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-textarea-with-helper-text',
+  selector: 'app-root',
   templateUrl: './textarea-with-helper-text.component.html',
   styleUrls: ['./textarea-with-helper-text.component.scss']
 })

@@ -1,26 +1,40 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ControlledTextareaComponent } from './controlled-textarea/controlled-textarea.component';
-import { UncontrolledTextareaComponent } from './uncontrolled-textarea/uncontrolled-textarea.component';
-import { TextareaWithHelperTextComponent } from './textarea-with-helper-text/textarea-with-helper-text.component';
-import { TextareaWithPlaceholderComponent } from './textarea-with-placeholder/textarea-with-placeholder.component';
-import { DisabledTextareaComponent } from './disabled-textarea/disabled-textarea.component';
-import { OptionalTextareaComponent } from './optional-textarea/optional-textarea.component';
-import { TextareaVertialgrowManualComponent } from './textarea-vertialgrow-manual/textarea-vertialgrow-manual.component';
-import { TextareaVertialgrowNoneComponent } from './textarea-vertialgrow-none/textarea-vertialgrow-none.component';
-import { TextareaWithDefaultRowsComponent } from './textarea-with-default-rows/textarea-with-default-rows.component';
-import { InvalidTextareaComponent } from './invalid-textarea/invalid-textarea.component';
-import { TextareaWithPatternConstraintComponent } from './textarea-with-pattern-constraint/textarea-with-pattern-constraint.component';
-import { TextareaWithLengthConstraintComponent } from './textarea-with-length-constraint/textarea-with-length-constraint.component';
-import { TextareaWithCustomErrorComponent } from './textarea-with-custom-error/textarea-with-custom-error.component';
-import { FillParentSizeTextareaComponent } from './fill-parent-size-textarea/fill-parent-size-textarea.component';
+import { ControlledTextareaModule } from './controlled-textarea/controlled-textarea.module';
+import { UncontrolledTextareaModule } from './uncontrolled-textarea/uncontrolled-textarea.module';
+import { TextareaWithHelperTextModule } from './textarea-with-helper-text/textarea-with-helper-text.module';
+import { TextareaWithPlaceholderModule } from './textarea-with-placeholder/textarea-with-placeholder.module';
+import { DisabledTextareaModule } from './disabled-textarea/disabled-textarea.module';
+import { OptionalTextareaModule } from './optional-textarea/optional-textarea.module';
+import { TextareaVertialgrowManualModule } from './textarea-vertialgrow-manual/textarea-vertialgrow-manual.module';
+import { TextareaVertialgrowNoneModule } from './textarea-vertialgrow-none/textarea-vertialgrow-none.module';
+import { TextareaWithDefaultRowsModule } from './textarea-with-default-rows/textarea-with-default-rows.module';
+import { TextareaWithPatternConstraintModule } from './textarea-with-pattern-constraint/textarea-with-pattern-constraint.module';
+import { TextareaWithLengthConstraintModule } from './textarea-with-length-constraint/textarea-with-length-constraint.module';
+import { TextareaWithCustomErrorModule } from './textarea-with-custom-error/textarea-with-custom-error.module';
+import { FillParentSizeTextareaModule } from './fill-parent-size-textarea/fill-parent-size-textarea.module';
+import { InvalidTextareaModule } from './invalid-textarea/invalid-textarea.module';
 
 
 
 @NgModule({
-  declarations: [ControlledTextareaComponent, UncontrolledTextareaComponent, TextareaWithHelperTextComponent, TextareaWithPlaceholderComponent, DisabledTextareaComponent, OptionalTextareaComponent, TextareaVertialgrowManualComponent, TextareaVertialgrowNoneComponent, TextareaWithDefaultRowsComponent, InvalidTextareaComponent, TextareaWithPatternConstraintComponent, TextareaWithLengthConstraintComponent, TextareaWithCustomErrorComponent, FillParentSizeTextareaComponent],
+  declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    ControlledTextareaModule,
+    UncontrolledTextareaModule,
+    TextareaWithHelperTextModule,
+    TextareaWithPlaceholderModule,
+    DisabledTextareaModule,
+    OptionalTextareaModule,
+    InvalidTextareaModule,
+    TextareaVertialgrowManualModule,
+    TextareaVertialgrowNoneModule,
+    TextareaWithDefaultRowsModule,
+    TextareaWithPatternConstraintModule,
+    TextareaWithLengthConstraintModule,
+    TextareaWithCustomErrorModule,
+    FillParentSizeTextareaModule
   ]
 })
 export class TextareaModule { }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-invalid-textarea',
+  selector: 'app-root',
   templateUrl: './invalid-textarea.component.html',
   styleUrls: ['./invalid-textarea.component.scss']
 })

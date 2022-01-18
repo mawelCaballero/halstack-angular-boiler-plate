@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-disabled-select',
+  selector: 'app-root',
   templateUrl: './disabled-select.component.html',
   styleUrls: ['./disabled-select.component.scss']
 })

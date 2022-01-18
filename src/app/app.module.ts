@@ -34,6 +34,13 @@ import { TableModule } from './views/table/table.module';
 import { TabsModule } from './views/tabs/tabs.module';
 import { TagModule } from './views/tag/tag.module';
 import { TextInputModule } from './views/text-input/text-input.module';
+import { TextareaModule } from './views/textarea/textarea.module';
+import { ToggleGroupModule } from './views/toggle-group/toggle-group.module';
+import { UplodadModule } from './views/uplodad/uplodad.module';
+import { V3SelectModule } from './views/v3-select/v3-select.module';
+import { V3TextareaModule } from './views/v3-textarea/v3-textarea.module';
+import { WizardModule } from './views/wizard/wizard.module';
+import { SelectModule } from './views/select/select.module';
 
 @NgModule({
   declarations: [
@@ -74,6 +81,13 @@ import { TextInputModule } from './views/text-input/text-input.module';
     TabsModule,
     TagModule,
     TextInputModule,
+    TextareaModule,
+    ToggleGroupModule,
+    UplodadModule,
+    V3SelectModule,
+    V3TextareaModule,
+    WizardModule,
+    SelectModule,
     ThemeModule
   ],
   providers: [ { provide: 'ThemeService', useClass: ThemeService }],

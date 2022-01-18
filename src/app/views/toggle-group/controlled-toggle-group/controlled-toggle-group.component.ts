@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-controlled-toggle-group',
+  selector: 'app-root',
   templateUrl: './controlled-toggle-group.component.html',
   styleUrls: ['./controlled-toggle-group.component.scss']
 })

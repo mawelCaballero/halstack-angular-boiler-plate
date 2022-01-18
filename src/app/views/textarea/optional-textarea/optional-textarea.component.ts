@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-optional-textarea',
+  selector: 'app-root',
   templateUrl: './optional-textarea.component.html',
   styleUrls: ['./optional-textarea.component.scss']
 })

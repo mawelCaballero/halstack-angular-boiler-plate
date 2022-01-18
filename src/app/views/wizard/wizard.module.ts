@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ControlledWizardComponent } from './controlled-wizard/controlled-wizard.component';
-import { UncontrolledWizardComponent } from './uncontrolled-wizard/uncontrolled-wizard.component';
-import { VerticalWizardComponent } from './vertical-wizard/vertical-wizard.component';
-
-
+import { ControlledWizardModule } from './controlled-wizard/controlled-wizard.module';
+import { UncontrolledWizardModule } from './uncontrolled-wizard/uncontrolled-wizard.module';
+import { VerticalWizardModule } from './vertical-wizard/vertical-wizard.module';
 
 @NgModule({
-  declarations: [ControlledWizardComponent, UncontrolledWizardComponent, VerticalWizardComponent],
+  declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    ControlledWizardModule,
+    UncontrolledWizardModule,
+    VerticalWizardModule
   ]
 })
 export class WizardModule { }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-basic-toggle-group',
+  selector: 'app-root',
   templateUrl: './basic-toggle-group.component.html',
   styleUrls: ['./basic-toggle-group.component.scss']
 })
