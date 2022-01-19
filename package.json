@@ -29,7 +29,7 @@
     "jest-preset-angular": "^7.1.1",
     "moment": "^2.24.0",
     "events": "3.3.0",
-    "core-js": "3.20.3",
+    "core-js": "2.6.9",
     "ng-mocks": "^10.4.0",
     "rxjs": "~6.5.2",
     "tslib": "^2.0.0",
