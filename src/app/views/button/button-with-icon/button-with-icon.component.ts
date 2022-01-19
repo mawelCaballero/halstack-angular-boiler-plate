@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 export class ButtonWithIconComponent implements OnInit {
 
   constructor() {
+    console.log('buttonWithIcon');
   }
 
   ngOnInit(): void {

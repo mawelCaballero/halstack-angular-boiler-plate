@@ -3,19 +3,26 @@ import { NgModule } from '@angular/core';
 import { DxcButtonModule, ThemeModule, ThemeService } from '@dxc-technology/halstack-angular';
 import { CommonModule } from '@angular/common';
 import { ButtonWithIconComponent } from './button-with-icon.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: ButtonWithIconComponent
+  }
+];
 
 @NgModule({
   declarations: [
     ButtonWithIconComponent,
   ],
   imports: [
-    BrowserModule,
     CommonModule,
     DxcButtonModule,
-    ThemeModule
+    ThemeModule,
+    RouterModule.forChild(routes)
   ],
   exports: [ButtonWithIconComponent],
-  providers: [ { provide: 'ThemeService', useClass: ThemeService }],
   bootstrap: [ButtonWithIconComponent] //
 })
 export class ButtonWithIconModule { }
