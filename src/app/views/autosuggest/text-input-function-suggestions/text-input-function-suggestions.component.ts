@@ -1,5 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { ThemeService } from '@dxc-technology/halstack-angular';
+import { Component, OnInit } from '@angular/core';
 import { of } from 'rxjs';
 import { switchMap, delay } from "rxjs/operators";
 
@@ -37,7 +36,7 @@ export class TextInputFunctionSuggestionsComponent implements OnInit {
     "Djibouti"
   ];
 
-  constructor(@Inject("ThemeService") private themeService: ThemeService) {
+  constructor() {
     this.callbackFunc = this.callbackFunc.bind(this);
   }
 

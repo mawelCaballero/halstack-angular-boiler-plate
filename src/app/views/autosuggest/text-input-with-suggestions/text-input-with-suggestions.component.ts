@@ -1,5 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { ThemeService } from '@dxc-technology/halstack-angular';
+import { Component,  OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -35,7 +34,7 @@ export class TextInputWithSuggestionsComponent implements OnInit {
     "Djibouti"
   ];
 
-  constructor(@Inject("ThemeService") private themeService: ThemeService) {}
+  constructor() {}
 
   ngOnInit(): void {
 
