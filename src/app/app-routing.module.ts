@@ -229,8 +229,9 @@ routes.push({ path: 'buttonWithIcon', loadChildren: () => import('./views/button
 // routes.push({ path: 'multiple-select', component: MultipleSelectComponent});
 // routes.push({ path: 'searchable-select', component: SearchableSelectComponent});
 
+// Hi Jiale and Aida
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{ useHash: true })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
