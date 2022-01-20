@@ -7,10 +7,7 @@ routes.push({ path: '', redirectTo: 'buttonModes', pathMatch: 'full' });
 //Button
 routes.push({ path: 'buttonModes',  component: ButtonModesComponent });
 routes.push({ path: 'buttonWithIcon', loadChildren: () => import('./views/button/button-with-icon/button-with-icon.module').then(m => m.ButtonWithIconModule) });
-
-// routes.push({ path: 'buttonWithIcon', component: ButtonWithIconComponent });
-// routes.push({ path: 'sizedButton', component: SizedButtonComponent });
-// routes.push({ path: 'fillParentButton', component: FillParentButtonComponent });
+routes.push({ path: 'fillParentButton', loadChildren: () => import('./views/button/fill-parent-button/fill-parent-button.module').then(m => m.FillParentButtonModule) });
 // routes.push({ path: 'autosuggestInput', component: TextInputWithSuggestionsComponent });
 // routes.push({ path: 'autosuggest-function-input', component: TextInputFunctionSuggestionsComponent });
 
