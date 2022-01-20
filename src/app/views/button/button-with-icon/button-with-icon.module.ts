@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { DxcButtonModule, ThemeModule, ThemeService } from '@dxc-technology/halstack-angular';
+import {
+  DxcButtonModule,
+  ThemeModule,
+  ThemeService,
+} from '@dxc-technology/halstack-angular';
 import { CommonModule } from '@angular/common';
 import { ButtonWithIconComponent } from './button-with-icon.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -8,21 +12,19 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    component: ButtonWithIconComponent
-  }
+    component: ButtonWithIconComponent,
+  },
 ];
 
 @NgModule({
-  declarations: [
-    ButtonWithIconComponent,
-  ],
+  declarations: [ButtonWithIconComponent],
   imports: [
     CommonModule,
     DxcButtonModule,
     ThemeModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
   ],
   exports: [ButtonWithIconComponent],
-  bootstrap: [ButtonWithIconComponent] //
+  bootstrap: [ButtonWithIconComponent],
 })
-export class ButtonWithIconModule { }
+export class ButtonWithIconModule {}

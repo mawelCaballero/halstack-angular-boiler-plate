@@ -1,22 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { DxcButtonModule, ThemeModule, ThemeService } from '@dxc-technology/halstack-angular';
+import {
+  DxcButtonModule,
+  ThemeModule,
+  ThemeService,
+} from '@dxc-technology/halstack-angular';
 import { CommonModule } from '@angular/common';
 import { SizedButtonComponent } from './sized-button.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: SizedButtonComponent,
+  },
+];
 
 @NgModule({
-  declarations: [
-    SizedButtonComponent,
-  ],
+  declarations: [SizedButtonComponent],
   imports: [
     BrowserModule,
     CommonModule,
     DxcButtonModule,
-    ThemeModule
+    ThemeModule,
+    RouterModule.forChild(routes),
   ],
   exports: [SizedButtonComponent],
-  providers: [ { provide: 'ThemeService', useClass: ThemeService }],
-  bootstrap: [SizedButtonComponent] //
+  providers: [{ provide: 'ThemeService', useClass: ThemeService }],
+  bootstrap: [SizedButtonComponent], //
 })
-export class SizedButtonModule { }
-
+export class SizedButtonModule {}
