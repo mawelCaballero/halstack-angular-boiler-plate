@@ -7,15 +7,18 @@ routes.push({ path: '', redirectTo: 'buttonModes', pathMatch: 'full' });
 //Button
 routes.push({ path: 'buttonModes',  component: ButtonModesComponent });
 routes.push({ path: 'buttonWithIcon', loadChildren: () => import('./views/button/button-with-icon/button-with-icon.module').then(m => m.ButtonWithIconModule) });
+routes.push({ path: 'sizedButton', loadChildren: () => import('./views/button/sized-button/sized-button.module').then(m => m.SizedButtonModule) });
 routes.push({ path: 'fillParentButton', loadChildren: () => import('./views/button/fill-parent-button/fill-parent-button.module').then(m => m.FillParentButtonModule) });
-// routes.push({ path: 'autosuggestInput', component: TextInputWithSuggestionsComponent });
-// routes.push({ path: 'autosuggest-function-input', component: TextInputFunctionSuggestionsComponent });
 
-// //Checkbox
-// routes.push({ path: 'checkbox-controlled', component: CheckboxControlledComponent });
-// routes.push({ path: 'checkbox-label-position', component: CheckboxLabelPositionComponent });
-// routes.push({ path: 'checkbox-sized', component: CheckboxSizedComponent });
-// routes.push({ path: 'checkbox-uncontrolled', component: CheckboxUncontrolledComponent });
+//Autosuggest
+routes.push({ path: 'autosuggestInput', loadChildren: () => import('./views/autosuggest/text-input-function-suggestions/text-input-function-suggestions.module').then(m => m.TextInputFunctionSuggestionsModule) });
+routes.push({ path: 'autosuggest-function-input', loadChildren: () => import('./views/autosuggest/text-input-with-suggestions/text-input-with-suggestions.module').then(m => m.TextInputWithSuggestionsModule) });
+
+//Checkbox
+routes.push({ path: 'checkbox-controlled', loadChildren: () => import('./views/checkbox/checkbox-controlled/checkbox-controlled.module').then(m => m.CheckboxControlledModule) });
+routes.push({ path: 'checkbox-label-position', loadChildren: () => import('./views/checkbox/checkbox-label-position/checkbox-label-position.module').then(m => m.CheckboxLabelPositionModule) });
+routes.push({ path: 'checkbox-sized', loadChildren: () => import('./views/checkbox/checkbox-sized/checkbox-sized.module').then(m => m.CheckboxSizedModule)  });
+routes.push({ path: 'checkbox-uncontrolled', loadChildren: () => import('./views/checkbox/checkbox-uncontrolled/checkbox-uncontrolled.module').then(m => m.CheckboxUncontrolledModule)  });
 
 // //Date
 // routes.push({ path: 'controlled-date', component: ControlledDateComponent });

@@ -4,8 +4,14 @@ import { DxcCheckboxModule, ThemeModule, ThemeService } from '@dxc-technology/ha
 import { CheckboxUncontrolledComponent } from './checkbox-uncontrolled.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
-
+const routes: Routes = [
+  {
+    path: '',
+    component: CheckboxUncontrolledComponent,
+  },
+];
 
 @NgModule({
   declarations: [CheckboxUncontrolledComponent],
@@ -13,7 +19,8 @@ import { BrowserModule } from '@angular/platform-browser';
     BrowserModule,
     CommonModule,
     ThemeModule,
-    DxcCheckboxModule
+    DxcCheckboxModule,
+    RouterModule.forChild(routes)
   ],exports: [CheckboxUncontrolledComponent],
   providers: [ { provide: 'ThemeService', useClass: ThemeService }],
   bootstrap: [CheckboxUncontrolledComponent]
