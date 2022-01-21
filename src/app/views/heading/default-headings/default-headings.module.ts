@@ -2,7 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DxcHeadingModule, ThemeModule } from '@dxc-technology/halstack-angular';
 import { DefaultHeadingsComponent } from './default-headings.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const routes: Routes = [
+  {
+    path: '',
+    component: DefaultHeadingsComponent,
+  },
+];
 
 
 @NgModule({
@@ -10,7 +17,8 @@ import { DefaultHeadingsComponent } from './default-headings.component';
   imports: [
     CommonModule,
     ThemeModule,
-    DxcHeadingModule
+    DxcHeadingModule,
+    RouterModule.forChild(routes),
   ],
    exports: [DefaultHeadingsComponent]
 })

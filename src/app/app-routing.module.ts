@@ -290,14 +290,44 @@ routes.push({
     ),
 });
 
-// //Header
-// routes.push({ path: 'custom-header', component: CustomHeaderComponent });
-// routes.push({ path: 'default-header', component: DefaultHeaderComponent });
-// routes.push({ path: 'header-with-dropdown', component: HeaderWithDropdownComponent });
+//Header
+routes.push({
+  path: 'customHeader',
+  loadChildren: () =>
+    import('./views/header/custom-header/custom-header.module').then(
+      (m) => m.CustomHeaderModule
+    ),
+});
+routes.push({
+  path: 'defaultHeader',
+  loadChildren: () =>
+    import('./views/header/default-header/default-header.module').then(
+      (m) => m.DefaultHeaderModule
+    ),
+});
+routes.push({
+  path: 'headerWithDropdown',
+  loadChildren: () =>
+    import(
+      './views/header/header-with-dropdown/header-with-dropdown.module'
+    ).then((m) => m.HeaderWithDropdownModule),
+});
 
-// //Heading
-// routes.push({ path: 'default-headings', component: DefaultHeadingsComponent });
-// routes.push({ path: 'headings-with-different-weights', component: HeadingsWithDifferentWeightsComponent });
+//Heading
+routes.push({
+  path: 'defaultHeadings',
+  loadChildren: () =>
+    import('./views/heading/default-headings/default-headings.module').then(
+      (m) => m.DefaultHeadingsModule
+    ),
+});
+routes.push({
+  path: 'headingsWithDifferentWeights',
+  loadChildren: () =>
+    import(
+      './views/heading/headings-with-different-weights/headings-with-different-weights.module'
+    ).then((m) => m.HeadingsWithDifferentWeightsModule),
+});
 
 // //InputTextModule
 // routes.push({ path: 'controlled-input-text', component:  ControlledInputTextComponent });
