@@ -12,4 +12,8 @@ export class LinkWithActionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onClick() {
+    console.log("Click on Link");
+  }
+
 }

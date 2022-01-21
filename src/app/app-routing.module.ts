@@ -366,12 +366,42 @@ routes.push({
     ).then((m) => m.UncontrolledInputTextModule),
 });
 
-// //Link
-// routes.push({ path: 'default-link', component: DefaultLinkComponent });
-// routes.push({ path: 'disabled-link', component: DisabledLinkComponent });
-// routes.push({ path: 'link-with-action', component: LinkWithActionComponent });
-// routes.push({ path: 'link-with-icon', component: LinkWithIconComponent });
-// routes.push({path: 'undecorated-link-with-new-window', component: UndecoratedLinkWithNewWindowComponent});
+//Link
+routes.push({
+  path: 'defaultLink',
+  loadChildren: () =>
+    import('./views/link/default-link/default-link.module').then(
+      (m) => m.DefaultLinkModule
+    ),
+});
+routes.push({
+  path: 'disabledLink',
+  loadChildren: () =>
+    import('./views/link/disabled-link/disabled-link.module').then(
+      (m) => m.DisabledLinkModule
+    ),
+});
+routes.push({
+  path: 'linkWithAction',
+  loadChildren: () =>
+    import('./views/link/link-with-action/link-with-action.module').then(
+      (m) => m.LinkWithActionModule
+    ),
+});
+routes.push({
+  path: 'linkWithIcon',
+  loadChildren: () =>
+    import('./views/link/link-with-icon/link-with-icon.module').then(
+      (m) => m.LinkWithIconModule
+    ),
+});
+routes.push({
+  path: 'undecoratedLinkWithNewWindow',
+  loadChildren: () =>
+    import(
+      './views/link/undecorated-link-with-new-window/undecorated-link-with-new-window.module'
+    ).then((m) => m.UndecoratedLinkWithNewWindowModule),
+});
 
 // //Number input
 // routes.push({ path: 'controlled-number', component:  ControlledNumberModule });
