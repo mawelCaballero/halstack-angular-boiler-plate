@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./disabled-number.component.scss']
 })
 export class DisabledNumberComponent implements OnInit {
-
+  value = "";
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onChange(event) {
+    this.value = event;
+  }
+
+  onBlur({ value, error }) {
+    this.value = value;
+  }
 }

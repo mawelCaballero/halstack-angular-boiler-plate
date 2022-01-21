@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./optional-number.component.scss']
 })
 export class OptionalNumberComponent implements OnInit {
-
+  value = "";
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onChange(event) {
+    this.value = event;
+  }
+
+  onBlur({ value, error }) {
+    this.value = value;
   }
 
 }

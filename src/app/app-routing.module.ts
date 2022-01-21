@@ -403,19 +403,91 @@ routes.push({
     ).then((m) => m.UndecoratedLinkWithNewWindowModule),
 });
 
-// //Number input
-// routes.push({ path: 'controlled-number', component:  ControlledNumberModule });
-// routes.push({ path: 'custom-error-number', component:  CustomErrorNumberComponent });
-// routes.push({ path: 'disabled-number', component:  DisabledNumberComponent });
-// routes.push({ path: 'fill-parent-size-number', component:  FillParentSizeNumberComponent });
-// routes.push({ path: 'helper-text-number', component:  HelperTextNumberComponent });
-// routes.push({ path: 'invalid-number', component:  InvalidNumberComponent });
-// routes.push({ path: 'min-max-step-number', component:  MinMaxStepNumberComponent });
-// routes.push({ path: 'optional-number', component:  OptionalNumberComponent });
-// routes.push({ path: 'placeholder-number', component:  PlaceholderNumberComponent });
-// routes.push({ path: 'preffix-number', component:  PreffixNumberComponent });
-// routes.push({ path: 'suffix-number', component:  SuffixNumberComponent });
-// routes.push({ path: 'uncontrolled-number', component:  UncontrolledNumberComponent });
+//Number input
+routes.push({
+  path: 'controlledNumber',
+  loadChildren: () =>
+    import(
+      './views/number-input/controlled-number/controlled-number.module'
+    ).then((m) => m.ControlledNumberModule),
+});
+routes.push({
+  path: 'customErrorNumber',
+  loadChildren: () =>
+    import(
+      './views/number-input/custom-error-number/custom-error-number.module'
+    ).then((m) => m.CustomErrorNumberModule),
+});
+routes.push({
+  path: 'disabledNumber',
+  loadChildren: () =>
+    import('./views/number-input/disabled-number/disabled-number.module').then(
+      (m) => m.DisabledNumberModule
+    ),
+});
+routes.push({
+  path: 'fillParentSizeNumber',
+  loadChildren: () =>
+    import(
+      './views/number-input/fill-parent-size-number/fill-parent-size-number.module'
+    ).then((m) => m.FillParentSizeNumberModule),
+});
+routes.push({
+  path: 'helperTextNumber',
+  loadChildren: () =>
+    import(
+      './views/number-input/helper-text-number/helper-text-number.module'
+    ).then((m) => m.HelperTextNumberModule),
+});
+routes.push({
+  path: 'invalidNumber',
+  loadChildren: () =>
+    import('./views/number-input/invalid-number/invalid-number.module').then(
+      (m) => m.InvalidNumberModule
+    ),
+});
+routes.push({
+  path: 'minMaxStepNumber',
+  loadChildren: () =>
+    import(
+      './views/number-input/min-max-step-number/min-max-step-number.module'
+    ).then((m) => m.MinMaxStepNumberModule),
+});
+routes.push({
+  path: 'optionalNumber',
+  loadChildren: () =>
+    import('./views/number-input/optional-number/optional-number.module').then(
+      (m) => m.OptionalNumberModule
+    ),
+});
+routes.push({
+  path: 'placeholderNumber',
+  loadChildren: () =>
+    import(
+      './views/number-input/placeholder-number/placeholder-number.module'
+    ).then((m) => m.PlaceholderNumberModule),
+});
+routes.push({
+  path: 'prefixNumber',
+  loadChildren: () =>
+    import('./views/number-input/preffix-number/preffix-number.module').then(
+      (m) => m.PreffixNumberModule
+    ),
+});
+routes.push({
+  path: 'suffixNumber',
+  loadChildren: () =>
+    import('./views/number-input/suffix-number/suffix-number.module').then(
+      (m) => m.SuffixNumberModule
+    ),
+});
+routes.push({
+  path: 'uncontrolledNumber',
+  loadChildren: () =>
+    import(
+      './views/number-input/uncontrolled-number/uncontrolled-number.module'
+    ).then((m) => m.UncontrolledNumberModule),
+});
 
 // //Paginator
 // routes.push({ path: 'default-paginator', component: PaginatorComponent});

@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fill-parent-size-number.component.scss']
 })
 export class FillParentSizeNumberComponent implements OnInit {
-
+  value = "";
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onChange(event) {
+    this.value = event;
+  }
+
+  onBlur({ value, error }) {
+    this.value = value;
   }
 
 }
