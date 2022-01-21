@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-controlled-accordion-group',
+  selector: 'app-root',
   templateUrl: './controlled-accordion-group.component.html',
   styleUrls: ['./controlled-accordion-group.component.scss']
 })
