@@ -3,6 +3,31 @@ import { Routes, RouterModule } from '@angular/router';
 import { ButtonModesComponent } from './views/button/button-modes/button-modes.component';
 
 let routes: Routes = [];
+
+routes.push({
+  path: 'controlledAccordionGroup',
+  loadChildren: () =>
+    import('./views/accordion-group/controlled-accordion-group/controlled-accordion-group.module').then(
+      (m) => m.ControlledAccordionGroupModule
+    ),
+});
+
+routes.push({
+  path: 'uncontrolledAccordionGroup',
+  loadChildren: () =>
+    import('./views/accordion-group/uncontrolled-accordion-group/uncontrolled-accordion-group.module').then(
+      (m) => m.UncontrolledAccordionGroupModule
+    ),
+});
+
+routes.push({
+  path: 'disabledAccordionGroup',
+  loadChildren: () =>
+    import('./views/accordion-group/disabled-accordion-group/disabled-accordion-group.module').then(
+      (m) => m.DisabledAccordionGroupModule
+    ),
+});
+
 routes.push({ path: '', redirectTo: 'buttonModes', pathMatch: 'full' });
 //Button
 routes.push({ path: 'buttonModes', component: ButtonModesComponent });
