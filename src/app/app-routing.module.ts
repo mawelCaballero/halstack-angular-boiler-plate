@@ -200,10 +200,28 @@ routes.push({
     ),
 });
 
-// // Dropdown
-// routes.push({ path: 'default-dropdown', component: DefaultDropdownComponent });
-// routes.push({ path: 'default-dropdown-expand-on-hover', component: DefaultDropdownExpandOnHoverComponent });
-// routes.push({ path: 'default-dropdown-expand-on-hover', component: DefaultDropdownExpandOnHoverComponent });
+//Dropdown
+routes.push({
+  path: 'default-dropdown',
+  loadChildren: () =>
+    import('./views/dropdown/default-dropdown/default-dropdown.module').then(
+      (m) => m.DefaultDropdownModule
+    ),
+});
+routes.push({
+  path: 'default-dropdown-expand-on-hover',
+  loadChildren: () =>
+    import(
+      './views/dropdown/default-dropdown-expand-on-hover/default-dropdown-expand-on-hover.module'
+    ).then((m) => m.DefaultDropdownExpandOnHoverModule),
+});
+routes.push({
+  path: 'dropdown-with-icons',
+  loadChildren: () =>
+    import(
+      './views/dropdown/dropdown-with-icons/dropdown-with-icons.module'
+    ).then((m) => m.DropdownWithIconsModule),
+});
 
 // //File-input
 // routes.push({ path: 'default-file-input', component: DefaultFileInputComponent });
@@ -383,9 +401,9 @@ routes.push({
 routes.push({
   path: 'v3SizedSelect',
   loadChildren: () =>
-    import(
-      './views/v3-select/v3-sized-select/v3-sized-select.module'
-    ).then((m) => m.V3SizedSelectModule),
+    import('./views/v3-select/v3-sized-select/v3-sized-select.module').then(
+      (m) => m.V3SizedSelectModule
+    ),
 });
 routes.push({
   path: 'v3UncontrolledSelect',
