@@ -54,6 +54,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     // SelectModule,
     ThemeModule
   ],
+  providers: [ { provide: 'ThemeService', useClass: ThemeService }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
