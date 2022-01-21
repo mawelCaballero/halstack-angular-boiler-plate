@@ -5,10 +5,28 @@ import { ButtonModesComponent } from './views/button/button-modes/button-modes.c
 let routes: Routes = [];
 routes.push({ path: '', redirectTo: 'buttonModes', pathMatch: 'full' });
 //Button
-routes.push({ path: 'buttonModes',  component: ButtonModesComponent });
-routes.push({ path: 'buttonWithIcon', loadChildren: () => import('./views/button/button-with-icon/button-with-icon.module').then(m => m.ButtonWithIconModule) });
-routes.push({ path: 'sizedButton', loadChildren: () => import('./views/button/sized-button/sized-button.module').then(m => m.SizedButtonModule) });
-routes.push({ path: 'fillParentButton', loadChildren: () => import('./views/button/fill-parent-button/fill-parent-button.module').then(m => m.FillParentButtonModule) });
+routes.push({ path: 'buttonModes', component: ButtonModesComponent });
+routes.push({
+  path: 'buttonWithIcon',
+  loadChildren: () =>
+    import('./views/button/button-with-icon/button-with-icon.module').then(
+      (m) => m.ButtonWithIconModule
+    ),
+});
+routes.push({
+  path: 'sizedButton',
+  loadChildren: () =>
+    import('./views/button/sized-button/sized-button.module').then(
+      (m) => m.SizedButtonModule
+    ),
+});
+routes.push({
+  path: 'fillParentButton',
+  loadChildren: () =>
+    import('./views/button/fill-parent-button/fill-parent-button.module').then(
+      (m) => m.FillParentButtonModule
+    ),
+});
 
 //Accordion
 //routes.push({ path: 'accordionWithAssistiveText', loadChildren: () => import('./views/accordion/accordion-with-assistive-text/accordion-with-assistive-text.module').then(m => m.TextInputFunctionSuggestionsModule) });
@@ -20,41 +38,167 @@ routes.push({ path: 'fillParentButton', loadChildren: () => import('./views/butt
 //ApplicationLayout
 
 //Autosuggest
-routes.push({ path: 'autosuggestInput', loadChildren: () => import('./views/autosuggest/text-input-function-suggestions/text-input-function-suggestions.module').then(m => m.TextInputFunctionSuggestionsModule) });
-routes.push({ path: 'autosuggest-function-input', loadChildren: () => import('./views/autosuggest/text-input-with-suggestions/text-input-with-suggestions.module').then(m => m.TextInputWithSuggestionsModule) });
+routes.push({
+  path: 'autosuggestInput',
+  loadChildren: () =>
+    import(
+      './views/autosuggest/text-input-function-suggestions/text-input-function-suggestions.module'
+    ).then((m) => m.TextInputFunctionSuggestionsModule),
+});
+routes.push({
+  path: 'autosuggest-function-input',
+  loadChildren: () =>
+    import(
+      './views/autosuggest/text-input-with-suggestions/text-input-with-suggestions.module'
+    ).then((m) => m.TextInputWithSuggestionsModule),
+});
 
 //Box
 
 //Card
 
 //Checkbox
-routes.push({ path: 'checkbox-controlled', loadChildren: () => import('./views/checkbox/checkbox-controlled/checkbox-controlled.module').then(m => m.CheckboxControlledModule) });
-routes.push({ path: 'checkbox-label-position', loadChildren: () => import('./views/checkbox/checkbox-label-position/checkbox-label-position.module').then(m => m.CheckboxLabelPositionModule) });
-routes.push({ path: 'checkbox-sized', loadChildren: () => import('./views/checkbox/checkbox-sized/checkbox-sized.module').then(m => m.CheckboxSizedModule)  });
-routes.push({ path: 'checkbox-uncontrolled', loadChildren: () => import('./views/checkbox/checkbox-uncontrolled/checkbox-uncontrolled.module').then(m => m.CheckboxUncontrolledModule)  });
+routes.push({
+  path: 'checkbox-controlled',
+  loadChildren: () =>
+    import(
+      './views/checkbox/checkbox-controlled/checkbox-controlled.module'
+    ).then((m) => m.CheckboxControlledModule),
+});
+routes.push({
+  path: 'checkbox-label-position',
+  loadChildren: () =>
+    import(
+      './views/checkbox/checkbox-label-position/checkbox-label-position.module'
+    ).then((m) => m.CheckboxLabelPositionModule),
+});
+routes.push({
+  path: 'checkbox-sized',
+  loadChildren: () =>
+    import('./views/checkbox/checkbox-sized/checkbox-sized.module').then(
+      (m) => m.CheckboxSizedModule
+    ),
+});
+routes.push({
+  path: 'checkbox-uncontrolled',
+  loadChildren: () =>
+    import(
+      './views/checkbox/checkbox-uncontrolled/checkbox-uncontrolled.module'
+    ).then((m) => m.CheckboxUncontrolledModule),
+});
 
 //Chip
 
 //Date
-routes.push({ path: 'controlled-date', loadChildren: () => import('./views/date/controlled-date/controlled-date.module').then(m => m.ControlledDateModule) });
-routes.push({ path: 'uncontrolled-date', loadChildren: () => import('./views/date/uncontrolled-date/uncontrolled-date.module').then(m => m.UncontrolledDateModule) });
-routes.push({ path: 'sized-date', loadChildren: () => import('./views/date/sized-date/sized-date.module').then(m => m.SizedDateModule) });
+routes.push({
+  path: 'controlled-date',
+  loadChildren: () =>
+    import('./views/date/controlled-date/controlled-date.module').then(
+      (m) => m.ControlledDateModule
+    ),
+});
+routes.push({
+  path: 'uncontrolled-date',
+  loadChildren: () =>
+    import('./views/date/uncontrolled-date/uncontrolled-date.module').then(
+      (m) => m.UncontrolledDateModule
+    ),
+});
+routes.push({
+  path: 'sized-date',
+  loadChildren: () =>
+    import('./views/date/sized-date/sized-date.module').then(
+      (m) => m.SizedDateModule
+    ),
+});
 
 // Date input
-routes.push({ path: 'controlled-date-input', loadChildren: () => import('./views/date-input/controlled-date-input/controlled-date-input.module').then(m => m.ControlledDateInputModule) });
-routes.push({ path: 'uncontrolled-date-input', loadChildren: () => import('./views/date-input/uncontrolled-date-input/uncontrolled-date-input.module').then(m => m.UncontrolledDateInputModule) });
-routes.push({ path: 'custom-error-date-input', loadChildren: () => import('./views/date-input/custom-error-date-input/custom-error-date-input.module').then(m => m.CustomErrorDateInputModule) });
-routes.push({ path: 'date-input-with-helper-text', loadChildren: () => import('./views/date-input/date-with-helper/date-with-helper.module').then(m => m.DateWithHelperModule) });
-routes.push({ path: 'disabled-date-input', loadChildren: () => import('./views/date-input/disabled-date-input/disabled-date-input.module').then(m => m.DisabledDateInputModule) });
-routes.push({ path: 'fill-parent-sized-date-input', loadChildren: () => import('./views/date-input/fill-parent-sized-date-input/fill-parent-sized-date-input.module').then(m => m.FillParentSizedDateInputModule) });
-routes.push({ path: 'formatted-date-input', loadChildren: () => import('./views/date-input/formatted-date-input/formatted-date-input.module').then(m => m.FormattedDateInputModule) });
-routes.push({ path: 'invalid-date-input', loadChildren: () => import('./views/date-input/invalid-date-input/invalid-date-input.module').then(m => m.InvalidDateInputModule) });
-routes.push({ path: 'optional-date-input', loadChildren: () => import('./views/date-input/optional-date-input/optional-date-input.module').then(m => m.OptionalDateInputModule) });
+routes.push({
+  path: 'controlled-date-input',
+  loadChildren: () =>
+    import(
+      './views/date-input/controlled-date-input/controlled-date-input.module'
+    ).then((m) => m.ControlledDateInputModule),
+});
+routes.push({
+  path: 'uncontrolled-date-input',
+  loadChildren: () =>
+    import(
+      './views/date-input/uncontrolled-date-input/uncontrolled-date-input.module'
+    ).then((m) => m.UncontrolledDateInputModule),
+});
+routes.push({
+  path: 'custom-error-date-input',
+  loadChildren: () =>
+    import(
+      './views/date-input/custom-error-date-input/custom-error-date-input.module'
+    ).then((m) => m.CustomErrorDateInputModule),
+});
+routes.push({
+  path: 'date-input-with-helper-text',
+  loadChildren: () =>
+    import('./views/date-input/date-with-helper/date-with-helper.module').then(
+      (m) => m.DateWithHelperModule
+    ),
+});
+routes.push({
+  path: 'disabled-date-input',
+  loadChildren: () =>
+    import(
+      './views/date-input/disabled-date-input/disabled-date-input.module'
+    ).then((m) => m.DisabledDateInputModule),
+});
+routes.push({
+  path: 'fill-parent-sized-date-input',
+  loadChildren: () =>
+    import(
+      './views/date-input/fill-parent-sized-date-input/fill-parent-sized-date-input.module'
+    ).then((m) => m.FillParentSizedDateInputModule),
+});
+routes.push({
+  path: 'formatted-date-input',
+  loadChildren: () =>
+    import(
+      './views/date-input/formatted-date-input/formatted-date-input.module'
+    ).then((m) => m.FormattedDateInputModule),
+});
+routes.push({
+  path: 'invalid-date-input',
+  loadChildren: () =>
+    import(
+      './views/date-input/invalid-date-input/invalid-date-input.module'
+    ).then((m) => m.InvalidDateInputModule),
+});
+routes.push({
+  path: 'optional-date-input',
+  loadChildren: () =>
+    import(
+      './views/date-input/optional-date-input/optional-date-input.module'
+    ).then((m) => m.OptionalDateInputModule),
+});
 
 //Dialog
-routes.push({ path: 'close-dialog', loadChildren: () => import('./views/dialog/close-dialog/close-dialog.module').then(m => m.CloseDialogModule) });
-routes.push({ path: 'default-dialog', loadChildren: () => import('./views/dialog/default-dialog/default-dialog.module').then(m => m.DefaultDialogModule) });
-routes.push({ path: 'modal-dialog', loadChildren: () => import('./views/dialog/modal-dialog/modal-dialog.module').then(m => m.ModalDialogModule) });
+routes.push({
+  path: 'close-dialog',
+  loadChildren: () =>
+    import('./views/dialog/close-dialog/close-dialog.module').then(
+      (m) => m.CloseDialogModule
+    ),
+});
+routes.push({
+  path: 'default-dialog',
+  loadChildren: () =>
+    import('./views/dialog/default-dialog/default-dialog.module').then(
+      (m) => m.DefaultDialogModule
+    ),
+});
+routes.push({
+  path: 'modal-dialog',
+  loadChildren: () =>
+    import('./views/dialog/modal-dialog/modal-dialog.module').then(
+      (m) => m.ModalDialogModule
+    ),
+});
 
 // // Dropdown
 // routes.push({ path: 'default-dropdown', component: DefaultDropdownComponent });
@@ -222,31 +366,133 @@ routes.push({ path: 'modal-dialog', loadChildren: () => import('./views/dialog/m
 // routes.push({ path: 'default-upload', component: DefaultUploadComponent});
 
 // //V3 Select
-// routes.push({ path: 'v3-controlled-select', component: V3ControlledSelectComponent});
-// routes.push({ path: 'v3-multiple-select', component: V3MultipleSelectComponent});
-// routes.push({ path: 'v3-sized-select', component: V3SizedSelectComponent});
-// routes.push({ path: 'v3-uncontrolled-select', component: V3UncontrolledSelectComponent});
-// routes.push({ path: 'v3-with-icons-select', component: V3WithIconsSelectComponent});
+routes.push({
+  path: 'v3ControlledSelect',
+  loadChildren: () =>
+    import(
+      './views/v3-select/v3-controlled-select/v3-controlled-select.module'
+    ).then((m) => m.V3ControlledSelectModule),
+});
+routes.push({
+  path: 'v3MultipleSelect',
+  loadChildren: () =>
+    import(
+      './views/v3-select/v3-multiple-select/v3-multiple-select.module'
+    ).then((m) => m.V3MultipleSelectModule),
+});
+routes.push({
+  path: 'v3SizedSelect',
+  loadChildren: () =>
+    import(
+      './views/v3-select/v3-sized-select/v3-sized-select.module'
+    ).then((m) => m.V3SizedSelectModule),
+});
+routes.push({
+  path: 'v3UncontrolledSelect',
+  loadChildren: () =>
+    import(
+      './views/v3-select/v3-uncontrolled-select/v3-uncontrolled-select.module'
+    ).then((m) => m.V3UncontrolledSelectModule),
+});
+routes.push({
+  path: 'v3WithIconsSelect',
+  loadChildren: () =>
+    import(
+      './views/v3-select/v3-with-icons-select/v3-with-icons-select.module'
+    ).then((m) => m.V3WithIconsSelectModule),
+});
 
 // //V3 Textarea
-// routes.push({ path: 'v3-controlled-textarea', component: V3ControlledTextareaComponent});
-// routes.push({ path: 'v3-disabled-textarea', component: V3DisabledTextareaComponent});
-// routes.push({ path: 'v3-fill-parent-textarea', component: V3FillParentTextareaComponent});
-// routes.push({ path: 'v3-invalid-textarea', component: V3InvalidTextareaComponent});
-// routes.push({ path: 'v3-required-textarea', component: V3RequiredTextareaComponent});
-// routes.push({ path: 'v3-uncontrolled-textarea', component: V3UncontrolledTextareaComponent});
+routes.push({
+  path: 'v3ControlledTextarea',
+  loadChildren: () =>
+    import(
+      './views/v3-textarea/v3-controlled-textarea/v3-controlled-textarea.module'
+    ).then((m) => m.V3ControlledTextareaModule),
+});
+routes.push({
+  path: 'v3DisabledTextarea',
+  loadChildren: () =>
+    import(
+      './views/v3-textarea/v3-disabled-textarea/v3-disabled-textarea.module'
+    ).then((m) => m.V3DisabledTextareaModule),
+});
+routes.push({
+  path: 'v3FillParentTextarea',
+  loadChildren: () =>
+    import(
+      './views/v3-textarea/v3-fill-parent-textarea/v3-fill-parent-textarea.module'
+    ).then((m) => m.V3FillParentTextareaModule),
+});
+routes.push({
+  path: 'v3InvalidTextarea',
+  loadChildren: () =>
+    import(
+      './views/v3-textarea/v3-invalid-textarea/v3-invalid-textarea.module'
+    ).then((m) => m.V3InvalidTextareaModule),
+});
+routes.push({
+  path: 'v3RequiredTextarea',
+  loadChildren: () =>
+    import(
+      './views/v3-textarea/v3-required-textarea/v3-required-textarea.module'
+    ).then((m) => m.V3RequiredTextareaModule),
+});
+routes.push({
+  path: 'v3UncontrolledTextarea',
+  loadChildren: () =>
+    import(
+      './views/v3-textarea/v3-uncontrolled-textarea/v3-uncontrolled-textarea.module'
+    ).then((m) => m.V3UncontrolledTextareaModule),
+});
 
 // //Select
-// routes.push({ path: 'default-select', component: DefaultSelectComponent});
-// routes.push({ path: 'disabled-select', component: DisabledSelectComponent});
-// routes.push({ path: 'error-multiple-select', component: ErrorMultipleSelectComponent});
-// routes.push({ path: 'error-select', component: ErrorSelectComponent});
-// routes.push({ path: 'multiple-select', component: MultipleSelectComponent});
-// routes.push({ path: 'searchable-select', component: SearchableSelectComponent});
+routes.push({
+  path: 'defaultSelect',
+  loadChildren: () =>
+    import('./views/select/default-select/default-select.module').then(
+      (m) => m.DefaultSelectModule
+    ),
+});
+routes.push({
+  path: 'disabledSelect',
+  loadChildren: () =>
+    import('./views/select/disabled-select/disabled-select.module').then(
+      (m) => m.DisabledSelectModule
+    ),
+});
+routes.push({
+  path: 'errorMultipleSelect',
+  loadChildren: () =>
+    import(
+      './views/select/error-multiple-select/error-multiple-select.module'
+    ).then((m) => m.ErrorMultipleSelectModule),
+});
+routes.push({
+  path: 'errorSelect',
+  loadChildren: () =>
+    import('./views/select/error-select/error-select.module').then(
+      (m) => m.ErrorSelectModule
+    ),
+});
+routes.push({
+  path: 'multipleSelect',
+  loadChildren: () =>
+    import('./views/select/multiple-select/multiple-select.module').then(
+      (m) => m.MultipleSelectModule
+    ),
+});
+routes.push({
+  path: 'searchableSelect',
+  loadChildren: () =>
+    import('./views/select/searchable-select/searchable-select.module').then(
+      (m) => m.SearchableSelectModule
+    ),
+});
 
 // Hi Jiale and Aida
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

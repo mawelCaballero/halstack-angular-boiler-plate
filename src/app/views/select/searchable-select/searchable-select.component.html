@@ -1,1 +1,16 @@
-<p>searchable-select works!</p>
+<div theme>
+  <dxc-select
+    label="Label"
+    helperText="HelperText"
+    margin="xsmall"
+    [options]="array1"
+    (onChange)="onChange($event)"
+    (onBlur)="onBlur($event)"
+    [optional]="true"
+    placeholder="Another placeholder"
+    size="large"
+    tabIndex="3"
+    [searchable]="true"
+  >
+  </dxc-select>
+</div>
