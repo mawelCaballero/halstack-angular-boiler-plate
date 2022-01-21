@@ -329,12 +329,42 @@ routes.push({
     ).then((m) => m.HeadingsWithDifferentWeightsModule),
 });
 
-// //InputTextModule
-// routes.push({ path: 'controlled-input-text', component:  ControlledInputTextComponent });
-// routes.push({ path: 'fill-parent-input-text', component:  FillParentInputTextComponent });
-// routes.push({ path: 'preffix-suffix-input-text', component:  PreffixSuffixInputTextComponent });
-// routes.push({ path: 'sized-input-text', component:  SizedInputTextComponent });
-// routes.push({ path: 'uncontrolled-input-text', component:  UncontrolledInputTextComponent });
+//InputTextModule
+routes.push({
+  path: 'controlledInputText',
+  loadChildren: () =>
+    import(
+      './views/input-text/controlled-input-text/controlled-input-text.module'
+    ).then((m) => m.ControlledInputTextModule),
+});
+routes.push({
+  path: 'fillParentInputText',
+  loadChildren: () =>
+    import(
+      './views/input-text/fill-parent-input-text/fill-parent-input-text.module'
+    ).then((m) => m.FillParentInputTextModule),
+});
+routes.push({
+  path: 'preffixSuffixInputText',
+  loadChildren: () =>
+    import(
+      './views/input-text/preffix-suffix-input-text/preffix-suffix-input-text.module'
+    ).then((m) => m.PreffixSuffixInputTextModule),
+});
+routes.push({
+  path: 'sizedInputText',
+  loadChildren: () =>
+    import('./views/input-text/sized-input-text/sized-input-text.module').then(
+      (m) => m.SizedInputTextModule
+    ),
+});
+routes.push({
+  path: 'uncontrolledInputText',
+  loadChildren: () =>
+    import(
+      './views/input-text/uncontrolled-input-text/uncontrolled-input-text.module'
+    ).then((m) => m.UncontrolledInputTextModule),
+});
 
 // //Link
 // routes.push({ path: 'default-link', component: DefaultLinkComponent });
