@@ -26,6 +26,5 @@ const routes: Routes = [
     RouterModule.forChild(routes),
   ],
   exports: [SizedButtonComponent],
-  providers: [{ provide: 'ThemeService', useClass: ThemeService }],
 })
 export class SizedButtonModule {}

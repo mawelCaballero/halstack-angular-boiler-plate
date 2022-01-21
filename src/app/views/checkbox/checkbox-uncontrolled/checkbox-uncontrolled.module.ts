@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DxcCheckboxModule, ThemeModule, ThemeService } from '@dxc-technology/halstack-angular';
+import { DxcCheckboxModule, ThemeModule } from '@dxc-technology/halstack-angular';
 import { CheckboxUncontrolledComponent } from './checkbox-uncontrolled.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,6 +22,5 @@ const routes: Routes = [
     DxcCheckboxModule,
     RouterModule.forChild(routes)
   ],exports: [CheckboxUncontrolledComponent],
-  providers: [ { provide: 'ThemeService', useClass: ThemeService }]
 })
 export class CheckboxUncontrolledModule { }
