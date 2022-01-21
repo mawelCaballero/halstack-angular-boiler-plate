@@ -6,12 +6,13 @@ import { ThemeModule, ThemeService } from '@dxc-technology/halstack-angular';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ButtonModesModule } from './views/button/button-modes/button-modes.module';
-
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 @NgModule({
   declarations: [
     AppComponent  ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     CommonModule,
     RouterModule,
     ButtonModesModule,
