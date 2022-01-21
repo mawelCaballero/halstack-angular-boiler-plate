@@ -4,6 +4,7 @@ import { V3ControlledTextareaComponent } from './v3-controlled-textarea.componen
 import { ThemeModule, V3DxcTextareaModule } from '@dxc-technology/halstack-angular';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 
 const routes: Routes = [
   {
@@ -14,10 +15,9 @@ const routes: Routes = [
 @NgModule({
   declarations: [V3ControlledTextareaComponent],
   imports: [
-    CommonModule,
     ThemeModule,
     V3DxcTextareaModule,
     RouterModule.forChild(routes),
-  ], exports: [V3ControlledTextareaComponent]
+  ]
 })
 export class V3ControlledTextareaModule { }

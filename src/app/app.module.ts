@@ -12,8 +12,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     AppComponent  ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     CommonModule,
+    BrowserAnimationsModule,
     RouterModule,
     ButtonModesModule,
     AppRoutingModule,

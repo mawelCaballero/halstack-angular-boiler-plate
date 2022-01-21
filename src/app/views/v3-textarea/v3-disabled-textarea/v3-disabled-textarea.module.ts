@@ -17,6 +17,6 @@ const routes: Routes = [
     ThemeModule,
     V3DxcTextareaModule,
     RouterModule.forChild(routes),
-  ], exports: [V3DisabledTextareaComponent]
+  ]
 })
 export class V3DisabledTextareaModule { }
