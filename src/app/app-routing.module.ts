@@ -274,9 +274,21 @@ routes.push({
     ).then((m) => m.FileInputWithPreviewModule),
 });
 
-// //Footer
-// routes.push({ path: 'custom-content-footer', component: CustomContenttFooterComponent });
-// routes.push({ path: 'default-footer', component: DefaultFooterComponent });
+//Footer
+routes.push({
+  path: 'customContentFooter',
+  loadChildren: () =>
+    import(
+      './views/footer/custom-contentt-footer/custom-contentt-footer.module'
+    ).then((m) => m.CustomContenttFooterModule),
+});
+routes.push({
+  path: 'defaultFooter',
+  loadChildren: () =>
+    import('./views/footer/default-footer/default-footer.module').then(
+      (m) => m.DefaultFooterModule
+    ),
+});
 
 // //Header
 // routes.push({ path: 'custom-header', component: CustomHeaderComponent });
