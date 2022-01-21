@@ -12,4 +12,8 @@ export class DropdownWithIconsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  selected($event) {
+    console.log($event);
+  }
+
 }

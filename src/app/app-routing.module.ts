@@ -46,7 +46,7 @@ routes.push({
     ).then((m) => m.TextInputFunctionSuggestionsModule),
 });
 routes.push({
-  path: 'autosuggest-function-input',
+  path: 'autosuggestFunctionInput',
   loadChildren: () =>
     import(
       './views/autosuggest/text-input-with-suggestions/text-input-with-suggestions.module'
@@ -59,28 +59,28 @@ routes.push({
 
 //Checkbox
 routes.push({
-  path: 'checkbox-controlled',
+  path: 'checkboxControlled',
   loadChildren: () =>
     import(
       './views/checkbox/checkbox-controlled/checkbox-controlled.module'
     ).then((m) => m.CheckboxControlledModule),
 });
 routes.push({
-  path: 'checkbox-label-position',
+  path: 'checkboxLabelPosition',
   loadChildren: () =>
     import(
       './views/checkbox/checkbox-label-position/checkbox-label-position.module'
     ).then((m) => m.CheckboxLabelPositionModule),
 });
 routes.push({
-  path: 'checkbox-sized',
+  path: 'checkboxSized',
   loadChildren: () =>
     import('./views/checkbox/checkbox-sized/checkbox-sized.module').then(
       (m) => m.CheckboxSizedModule
     ),
 });
 routes.push({
-  path: 'checkbox-uncontrolled',
+  path: 'checkboxUncontrolled',
   loadChildren: () =>
     import(
       './views/checkbox/checkbox-uncontrolled/checkbox-uncontrolled.module'
@@ -91,21 +91,21 @@ routes.push({
 
 //Date
 routes.push({
-  path: 'controlled-date',
+  path: 'controlledDate',
   loadChildren: () =>
     import('./views/date/controlled-date/controlled-date.module').then(
       (m) => m.ControlledDateModule
     ),
 });
 routes.push({
-  path: 'uncontrolled-date',
+  path: 'uncontrolledDate',
   loadChildren: () =>
     import('./views/date/uncontrolled-date/uncontrolled-date.module').then(
       (m) => m.UncontrolledDateModule
     ),
 });
 routes.push({
-  path: 'sized-date',
+  path: 'sizedDate',
   loadChildren: () =>
     import('./views/date/sized-date/sized-date.module').then(
       (m) => m.SizedDateModule
@@ -114,63 +114,63 @@ routes.push({
 
 // Date input
 routes.push({
-  path: 'controlled-date-input',
+  path: 'controlledDateInput',
   loadChildren: () =>
     import(
       './views/date-input/controlled-date-input/controlled-date-input.module'
     ).then((m) => m.ControlledDateInputModule),
 });
 routes.push({
-  path: 'uncontrolled-date-input',
+  path: 'uncontrolledDateInput',
   loadChildren: () =>
     import(
       './views/date-input/uncontrolled-date-input/uncontrolled-date-input.module'
     ).then((m) => m.UncontrolledDateInputModule),
 });
 routes.push({
-  path: 'custom-error-date-input',
+  path: 'customErrorDateInput',
   loadChildren: () =>
     import(
       './views/date-input/custom-error-date-input/custom-error-date-input.module'
     ).then((m) => m.CustomErrorDateInputModule),
 });
 routes.push({
-  path: 'date-input-with-helper-text',
+  path: 'dateInputWithHelperText',
   loadChildren: () =>
     import('./views/date-input/date-with-helper/date-with-helper.module').then(
       (m) => m.DateWithHelperModule
     ),
 });
 routes.push({
-  path: 'disabled-date-input',
+  path: 'disabledDateInput',
   loadChildren: () =>
     import(
       './views/date-input/disabled-date-input/disabled-date-input.module'
     ).then((m) => m.DisabledDateInputModule),
 });
 routes.push({
-  path: 'fill-parent-sized-date-input',
+  path: 'fillParentSizedDateInput',
   loadChildren: () =>
     import(
       './views/date-input/fill-parent-sized-date-input/fill-parent-sized-date-input.module'
     ).then((m) => m.FillParentSizedDateInputModule),
 });
 routes.push({
-  path: 'formatted-date-input',
+  path: 'formattedDateInput',
   loadChildren: () =>
     import(
       './views/date-input/formatted-date-input/formatted-date-input.module'
     ).then((m) => m.FormattedDateInputModule),
 });
 routes.push({
-  path: 'invalid-date-input',
+  path: 'invalidDateInput',
   loadChildren: () =>
     import(
       './views/date-input/invalid-date-input/invalid-date-input.module'
     ).then((m) => m.InvalidDateInputModule),
 });
 routes.push({
-  path: 'optional-date-input',
+  path: 'optionalDateInput',
   loadChildren: () =>
     import(
       './views/date-input/optional-date-input/optional-date-input.module'
@@ -179,21 +179,21 @@ routes.push({
 
 //Dialog
 routes.push({
-  path: 'close-dialog',
+  path: 'closeDialog',
   loadChildren: () =>
     import('./views/dialog/close-dialog/close-dialog.module').then(
       (m) => m.CloseDialogModule
     ),
 });
 routes.push({
-  path: 'default-dialog',
+  path: 'defaultDialog',
   loadChildren: () =>
     import('./views/dialog/default-dialog/default-dialog.module').then(
       (m) => m.DefaultDialogModule
     ),
 });
 routes.push({
-  path: 'modal-dialog',
+  path: 'modalDialog',
   loadChildren: () =>
     import('./views/dialog/modal-dialog/modal-dialog.module').then(
       (m) => m.ModalDialogModule
@@ -202,35 +202,77 @@ routes.push({
 
 //Dropdown
 routes.push({
-  path: 'default-dropdown',
+  path: 'defaultDropdown',
   loadChildren: () =>
     import('./views/dropdown/default-dropdown/default-dropdown.module').then(
       (m) => m.DefaultDropdownModule
     ),
 });
 routes.push({
-  path: 'default-dropdown-expand-on-hover',
+  path: 'defaultDropdownExpandOnHover',
   loadChildren: () =>
     import(
       './views/dropdown/default-dropdown-expand-on-hover/default-dropdown-expand-on-hover.module'
     ).then((m) => m.DefaultDropdownExpandOnHoverModule),
 });
 routes.push({
-  path: 'dropdown-with-icons',
+  path: 'dropdownWithIcons',
   loadChildren: () =>
     import(
       './views/dropdown/dropdown-with-icons/dropdown-with-icons.module'
     ).then((m) => m.DropdownWithIconsModule),
 });
 
-// //File-input
-// routes.push({ path: 'default-file-input', component: DefaultFileInputComponent });
-// routes.push({ path: 'disabled-file-input', component: DisabledFileInputComponent });
-// routes.push({ path: 'file-input-modes', component: FileInputModesComponent });
-// routes.push({ path: 'file-input-with-accepted-files', component: FileInputWithAcceptedFilesComponent });
-// routes.push({ path: 'file-input-with-error', component: FileInputWithErrorComponent });
-// routes.push({ path: 'file-input-with-one-file', component: FileInputWithOneFileComponent });
-// routes.push({ path: 'file-input-with-preview', component: FileInputWithPreviewComponent });
+//File-input
+routes.push({
+  path: 'defaultFileInput',
+  loadChildren: () =>
+    import(
+      './views/file-input/default-file-input/default-file-input.module'
+    ).then((m) => m.DefaultFileInputModule),
+});
+routes.push({
+  path: 'disabledFileInput',
+  loadChildren: () =>
+    import(
+      './views/file-input/disabled-file-input/disabled-file-input.module'
+    ).then((m) => m.DisabledFileInputModule),
+});
+routes.push({
+  path: 'fileInputModes',
+  loadChildren: () =>
+    import('./views/file-input/file-input-modes/file-input-modes.module').then(
+      (m) => m.FileInputModesModule
+    ),
+});
+routes.push({
+  path: 'fileInputWithAcceptedFiles',
+  loadChildren: () =>
+    import(
+      './views/file-input/file-input-with-accepted-files/file-input-with-accepted-files.module'
+    ).then((m) => m.FileInputWithAcceptedFilesModule),
+});
+routes.push({
+  path: 'fileInputWithError',
+  loadChildren: () =>
+    import(
+      './views/file-input/file-input-with-error/file-input-with-error.module'
+    ).then((m) => m.FileInputWithErrorModule),
+});
+routes.push({
+  path: 'fileIputWithOneFile',
+  loadChildren: () =>
+    import(
+      './views/file-input/file-input-with-one-file/file-input-with-one-file.module'
+    ).then((m) => m.FileInputWithOneFileModule),
+});
+routes.push({
+  path: 'fileInputWithPreview',
+  loadChildren: () =>
+    import(
+      './views/file-input/file-input-with-preview/file-input-with-preview.module'
+    ).then((m) => m.FileInputWithPreviewModule),
+});
 
 // //Footer
 // routes.push({ path: 'custom-content-footer', component: CustomContenttFooterComponent });

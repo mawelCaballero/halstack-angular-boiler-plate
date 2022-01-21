@@ -2,7 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DefaultFileInputComponent } from './default-file-input.component';
 import { DxcFileInputModule, ThemeModule } from '@dxc-technology/halstack-angular';
+import { RouterModule, Routes } from '@angular/router';
 
+const routes: Routes = [
+  {
+    path: '',
+    component: DefaultFileInputComponent,
+  },
+];
 
 
 @NgModule({
@@ -10,7 +17,8 @@ import { DxcFileInputModule, ThemeModule } from '@dxc-technology/halstack-angula
   imports: [
     CommonModule,
     ThemeModule,
-    DxcFileInputModule
+    DxcFileInputModule,
+    RouterModule.forChild(routes),
   ],
   exports: [DefaultFileInputComponent]
 })
