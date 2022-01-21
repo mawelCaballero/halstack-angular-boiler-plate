@@ -22,7 +22,6 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   exports: [TextInputFunctionSuggestionsComponent],
-  providers: [ { provide: 'ThemeService', useClass: ThemeService }],
-  bootstrap: [TextInputFunctionSuggestionsComponent]
+  providers: [ { provide: 'ThemeService', useClass: ThemeService }]
 })
 export class TextInputFunctionSuggestionsModule { }

@@ -21,6 +21,5 @@ const routes: Routes = [
   ],
   exports: [CheckboxLabelPositionComponent],
   providers: [ { provide: 'ThemeService', useClass: ThemeService }],
-  bootstrap: [CheckboxLabelPositionComponent] //
 })
 export class CheckboxLabelPositionModule { }

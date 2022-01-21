@@ -19,8 +19,7 @@ const routes: Routes = [
     ThemeModule,
     RouterModule.forChild(routes)
   ],
-  exports: [CheckboxSizedComponent],
-  bootstrap: [CheckboxSizedComponent]
+  exports: [CheckboxSizedComponent]
 })
 export class CheckboxSizedModule { }
 

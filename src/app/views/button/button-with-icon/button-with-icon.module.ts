@@ -24,7 +24,6 @@ const routes: Routes = [
     ThemeModule,
     RouterModule.forChild(routes),
   ],
-  exports: [ButtonWithIconComponent],
-  bootstrap: [ButtonWithIconComponent],
+  exports: [ButtonWithIconComponent]
 })
 export class ButtonWithIconModule {}

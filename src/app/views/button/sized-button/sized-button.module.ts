@@ -27,6 +27,5 @@ const routes: Routes = [
   ],
   exports: [SizedButtonComponent],
   providers: [{ provide: 'ThemeService', useClass: ThemeService }],
-  bootstrap: [SizedButtonComponent], //
 })
 export class SizedButtonModule {}

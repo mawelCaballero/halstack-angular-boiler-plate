@@ -21,6 +21,5 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],exports: [CheckboxControlledComponent],
   providers: [ { provide: 'ThemeService', useClass: ThemeService }],
-  bootstrap: [CheckboxControlledComponent] //
 })
 export class CheckboxControlledModule { }

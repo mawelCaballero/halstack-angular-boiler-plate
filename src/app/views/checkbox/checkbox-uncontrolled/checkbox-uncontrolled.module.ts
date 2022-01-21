@@ -22,7 +22,6 @@ const routes: Routes = [
     DxcCheckboxModule,
     RouterModule.forChild(routes)
   ],exports: [CheckboxUncontrolledComponent],
-  providers: [ { provide: 'ThemeService', useClass: ThemeService }],
-  bootstrap: [CheckboxUncontrolledComponent]
+  providers: [ { provide: 'ThemeService', useClass: ThemeService }]
 })
 export class CheckboxUncontrolledModule { }

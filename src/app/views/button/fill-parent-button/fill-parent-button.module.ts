@@ -18,6 +18,5 @@ const routes: Routes = [
   declarations: [FillParentButtonComponent],
   imports: [CommonModule, DxcButtonModule, RouterModule.forChild(routes)],
   providers: [{ provide: 'ThemeService', useClass: ThemeService }],
-  bootstrap: [FillParentButtonComponent],
 })
 export class FillParentButtonModule {}
