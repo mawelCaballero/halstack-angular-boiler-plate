@@ -28,6 +28,71 @@ routes.push({
     ),
 });
 
+
+routes.push({
+  path: 'alertWithChildren',
+  loadChildren: () =>
+    import('./views/alert/alert-with-children/alert-with-children.module').then(
+      (m) => m.AlertWithChildrenModule
+    ),
+});
+
+routes.push({
+  path: 'closableInlineAlert',
+  loadChildren: () =>
+    import('./views/alert/closable-inline-alert/closable-inline-alert.module').then(
+      (m) => m.ClosableInlineAlertModule
+    ),
+});
+
+routes.push({
+  path: 'errorAlert',
+  loadChildren: () =>
+    import('./views/alert/error-alert/error-alert.module').then(
+      (m) => m.ErrorAlertModule
+    ),
+});
+
+routes.push({
+  path: 'infoAlert',
+  loadChildren: () =>
+    import('./views/alert/info-alert/info-alert.module').then(
+      (m) => m.InfoAlertModule
+    ),
+});
+
+routes.push({
+  path: 'modalAlert',
+  loadChildren: () =>
+    import('./views/alert/modal-alert/modal-alert.module').then(
+      (m) => m.ModalAlertModule
+    ),
+});
+
+routes.push({
+  path: 'sizedAlert',
+  loadChildren: () =>
+    import('./views/alert/sized-alert/sized-alert.module').then(
+      (m) => m.SizedAlertModule
+    ),
+});
+
+routes.push({
+  path: 'successAlert',
+  loadChildren: () =>
+    import('./views/alert/success-alert/success-alert.module').then(
+      (m) => m.SuccessAlertModule
+    ),
+});
+
+routes.push({
+  path: 'warningAlert',
+  loadChildren: () =>
+    import('./views/alert/warning-alert/warning-alert.module').then(
+      (m) => m.WarningAlertModule
+    ),
+});
+
 routes.push({ path: '', redirectTo: 'buttonModes', pathMatch: 'full' });
 //Button
 routes.push({ path: 'buttonModes', component: ButtonModesComponent });

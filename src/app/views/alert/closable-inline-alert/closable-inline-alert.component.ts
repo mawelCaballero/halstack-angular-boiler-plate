@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./closable-inline-alert.component.scss']
 })
 export class ClosableInlineAlertComponent implements OnInit {
-
-  constructor() { }
+  isVisible: boolean = true;
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
-
+  handleVisibility() {
+    this.isVisible = !this.isVisible;
+    console.log(this.isVisible);
+  }
 }

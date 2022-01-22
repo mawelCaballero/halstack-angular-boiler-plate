@@ -12,4 +12,10 @@ export class ModalAlertComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  visible = false;
+
+  handleVisible() {
+    this.visible = !this.visible;
+  }
+
 }
