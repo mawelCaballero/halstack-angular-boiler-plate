@@ -1131,20 +1131,117 @@ routes.push({
 });
 
 // //TextArea
-// routes.push({ path: 'controlled-textarea', component: ControlledTextareaComponent});
-// routes.push({ path: 'disabled-textarea', component: DisabledTextareaComponent});
-// routes.push({ path: 'fill-parent-size-textarea', component: FillParentSizeTextareaComponent});
-// routes.push({ path: 'invalid-textarea', component: InvalidTextareaComponent});
-// routes.push({ path: 'optional-textarea', component: OptionalTextareaComponent});
-// routes.push({ path: 'textarea-vertical-grow-manual', component: TextareaVertialgrowManualComponent});
-// routes.push({ path: 'textarea-vertical-grow-none', component: TextareaVertialgrowNoneComponent});
-// routes.push({ path: 'textarea-with-custom-error', component: TextareaWithCustomErrorComponent});
-// routes.push({ path: 'textarea-with-default-rows', component: TextareaWithDefaultRowsComponent});
-// routes.push({ path: 'textarea-with-helper-text', component: TextareaWithHelperTextComponent});
-// routes.push({ path: 'textarea-with-length-constraint', component: TextareaWithLengthConstraintComponent});
-// routes.push({ path: 'textarea-with-pattern-constraint', component: TextareaWithPatternConstraintComponent});
-// routes.push({ path: 'textarea-with-placeholder', component: TextareaWithPlaceholderComponent});
-// routes.push({ path: 'uncontrolled-textarea', component: UncontrolledTextareaComponent});
+routes.push({
+  path: 'controlled-textarea',
+  loadChildren: () =>
+    import(
+      './views/textarea/controlled-textarea/controlled-textarea.module'
+    ).then((m) => m.ControlledTextareaModule), //
+});
+
+routes.push({
+  path: 'disabled-textarea',
+  loadChildren: () =>
+    import('./views/textarea/disabled-textarea/disabled-textarea.module').then(
+      (m) => m.DisabledTextareaModule
+    ), //
+});
+
+routes.push({
+  path: 'fill-parent-size-textarea',
+  loadChildren: () =>
+    import(
+      './views/textarea/fill-parent-size-textarea/fill-parent-size-textarea.module'
+    ).then((m) => m.FillParentSizeTextareaModule), //
+});
+
+routes.push({
+  path: 'invalid-textarea',
+  loadChildren: () =>
+    import('./views/textarea/invalid-textarea/invalid-textarea.module').then(
+      (m) => m.InvalidTextareaModule
+    ), //
+});
+
+routes.push({
+  path: 'optional-textarea',
+  loadChildren: () =>
+    import('./views/textarea/optional-textarea/optional-textarea.module').then(
+      (m) => m.OptionalTextareaModule
+    ), //
+});
+
+routes.push({
+  path: 'textarea-verticalgrow-manual',
+  loadChildren: () =>
+    import(
+      './views/textarea/textarea-vertialgrow-manual/textarea-vertialgrow-manual.module'
+    ).then((m) => m.TextareaVertialgrowManualModule), //
+});
+
+routes.push({
+  path: 'textarea-verticalgrow-manual',
+  loadChildren: () =>
+    import(
+      './views/textarea/textarea-vertialgrow-none/textarea-vertialgrow-none.module'
+    ).then((m) => m.TextareaVertialgrowNoneModule), //
+});
+
+routes.push({
+  path: 'textarea-with-custom-error',
+  loadChildren: () =>
+    import(
+      './views/textarea/textarea-with-custom-error/textarea-with-custom-error.module'
+    ).then((m) => m.TextareaWithCustomErrorModule), //
+});
+
+routes.push({
+  path: 'textarea-with-default-rows',
+  loadChildren: () =>
+    import(
+      './views/textarea/textarea-with-default-rows/textarea-with-default-rows.module'
+    ).then((m) => m.TextareaWithDefaultRowsModule), //
+});
+
+routes.push({
+  path: 'textarea-with-helper-text',
+  loadChildren: () =>
+    import(
+      './views/textarea/textarea-with-helper-text/textarea-with-helper-text.module'
+    ).then((m) => m.TextareaWithHelperTextModule), //
+});
+
+routes.push({
+  path: 'textarea-with-length-constraint',
+  loadChildren: () =>
+    import(
+      './views/textarea/textarea-with-length-constraint/textarea-with-length-constraint.module'
+    ).then((m) => m.TextareaWithLengthConstraintModule), //
+});
+
+routes.push({
+  path: 'textarea-with-pattern-constraint',
+  loadChildren: () =>
+    import(
+      './views/textarea/textarea-with-pattern-constraint/textarea-with-pattern-constraint.module'
+    ).then((m) => m.TextareaWithPatternConstraintModule), //
+});
+
+routes.push({
+  path: 'textarea-with-placeholder',
+  loadChildren: () =>
+    import(
+      './views/textarea/textarea-with-placeholder/textarea-with-placeholder.module'
+    ).then((m) => m.TextareaWithPlaceholderModule), //
+});
+
+routes.push({
+  path: 'uncontrolled-textarea',
+  loadChildren: () =>
+    import(
+      './views/textarea/uncontrolled-textarea/uncontrolled-textarea.module'
+    ).then((m) => m.UncontrolledTextareaModule), //
+});
 
 // //Toogle-Group
 // routes.push({ path: 'basic-toogle-group', component: BasicToggleGroupComponent});
