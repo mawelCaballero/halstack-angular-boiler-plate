@@ -1018,20 +1018,117 @@ routes.push({
 });
 
 // //TextInput
-// routes.push({ path:'controlled-input', component: ControlledInputComponent});
-// routes.push({ path:'disabled-input', component: DisabledInputComponent});
-// routes.push({ path: 'fill-parent-size-input', component: FillParentSizeInputComponent});
-// routes.push({ path: 'input-with-action', component: InputWithActionComponent});
-// routes.push({ path: 'input-with-custom-error', component: InputWithCustomErrorComponent});
-// routes.push({ path: 'input-with-helper-text', component:InputWithHelperTextComponent});
-// routes.push({ path: 'input-with-length-constraint', component: InputWithLengthConstraintComponent});
-// routes.push({ path: 'input-with-pattern-constraint', component: InputWithPatternConstraintComponent});
-// routes.push({ path: 'input-with-placeholder', component: InputWithPlaceholderComponent});
-// routes.push({ path: 'input-with-prefix', component: InputWithPrefixComponent});
-// routes.push({ path: 'input-with-suffix', component: InputWithSuffixComponent});
-// routes.push({ path: 'invalid-input', component: InvalidInputComponent});
-// routes.push({ path: 'optional-input', component: OptionalInputComponent});
-// routes.push({ path: 'uncontrolled-input', component: UncontrolledInputComponent});
+routes.push({
+  path: 'controlled-input',
+  loadChildren: () =>
+    import('./views/text-input/controlled-input/controlled-input.module').then(
+      (m) => m.ControlledInputModule
+    ),
+});
+
+routes.push({
+  path: 'disabled-input',
+  loadChildren: () =>
+    import('./views/text-input/disabled-input/disabled-input.module').then(
+      (m) => m.DisabledInputModule
+    ),
+});
+
+routes.push({
+  path: 'fill-parent-size-input',
+  loadChildren: () =>
+    import(
+      './views/text-input/fill-parent-size-input/fill-parent-size-input.module'
+    ).then((m) => m.FillParentSizeInputModule),
+});
+
+routes.push({
+  path: 'input-with-action',
+  loadChildren: () =>
+    import(
+      './views/text-input/input-with-action/input-with-action.module'
+    ).then((m) => m.InputWithActionModule),
+});
+
+routes.push({
+  path: 'input-with-custom-error',
+  loadChildren: () =>
+    import(
+      './views/text-input/input-with-custom-error/input-with-custom-error.module'
+    ).then((m) => m.InputWithCustomErrorModule),
+});
+
+routes.push({
+  path: 'input-with-helper-text',
+  loadChildren: () =>
+    import(
+      './views/text-input/input-with-helper-text/input-with-helper-text.module'
+    ).then((m) => m.InputWithHelperTextModule),
+});
+
+routes.push({
+  path: 'input-with-length-constraint',
+  loadChildren: () =>
+    import(
+      './views/text-input/input-with-length-constraint/input-with-length-constraint.module'
+    ).then((m) => m.InputWithLengthConstraintModule),
+});
+
+routes.push({
+  path: 'input-with-pattern-constraint',
+  loadChildren: () =>
+    import(
+      './views/text-input/input-with-pattern-constraint/input-with-pattern-constraint.module'
+    ).then((m) => m.InputWithPatternConstraintModule),
+});
+
+routes.push({
+  path: 'input-with-placeholder',
+  loadChildren: () =>
+    import(
+      './views/text-input/input-with-placeholder/input-with-placeholder.module'
+    ).then((m) => m.InputWithPlaceholderModule), //
+});
+
+routes.push({
+  path: 'input-with-prefix',
+  loadChildren: () =>
+    import(
+      './views/text-input/input-with-prefix/input-with-prefix.module'
+    ).then((m) => m.InputWithPrefixModule), //
+});
+
+routes.push({
+  path: 'input-with-suffix',
+  loadChildren: () =>
+    import(
+      './views/text-input/input-with-suffix/input-with-suffix.module'
+    ).then((m) => m.InputWithSuffixModule), //
+});
+
+routes.push({
+  path: 'invalid-input',
+  loadChildren: () =>
+    import('./views/text-input/invalid-input/invalid-input.module').then(
+      (m) => m.InvalidInputModule
+    ), //
+});
+
+routes.push({
+  path: 'optional-input',
+  loadChildren: () =>
+    import('./views/text-input/optional-input/optional-input.module').then(
+      (m) => m.OptionalInputModule
+    ), //
+});
+
+routes.push({
+  path: 'uncontrolled-input',
+  loadChildren: () =>
+    import(
+      './views/text-input/uncontrolled-input/uncontrolled-input.module'
+    ).then((m) => m.UncontrolledInputModule), //
+});
 
 // //TextArea
 // routes.push({ path: 'controlled-textarea', component: ControlledTextareaComponent});
