@@ -943,7 +943,13 @@ routes.push({
 });
 
 // //Table
-// routes.push({ path: 'simple-table', component: SimpleTableComponent});
+routes.push({
+  path: 'simple-table',
+  loadChildren: () =>
+    import('./views/table/simple-table/simple-table.module').then(
+      (m) => m.SimpleTableModule
+    ),
+});
 
 // //Tabs
 // routes.push({ path:'add-tabs-dynamically', component: AddTabsDynamicallyComponent});
