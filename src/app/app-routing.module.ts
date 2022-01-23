@@ -109,6 +109,14 @@ routes.push({
     ),
 });
 
+routes.push({
+  path: 'basicBox',
+  loadChildren: () =>
+    import('./views/box/basic-box/basic-box.module').then(
+      (m) => m.BasicBoxModule
+    ),
+});
+
 routes.push({ path: '', redirectTo: 'buttonModes', pathMatch: 'full' });
 //Button
 routes.push({ path: 'buttonModes', component: ButtonModesComponent });
@@ -131,6 +139,31 @@ routes.push({
   loadChildren: () =>
     import('./views/button/fill-parent-button/fill-parent-button.module').then(
       (m) => m.FillParentButtonModule
+    ),
+});
+
+//Card
+routes.push({
+  path: 'cardWithAction',
+  loadChildren: () =>
+    import('./views/card/card-with-action/card-with-action.module').then(
+      (m) => m.CardWithActionModule
+    ),
+});
+
+routes.push({
+  path: 'cardWithLink',
+  loadChildren: () =>
+    import('./views/card/card-with-link/card-with-link.module').then(
+      (m) => m.CardWithLinkModule
+    ),
+});
+
+routes.push({
+  path: 'defaultCard',
+  loadChildren: () =>
+    import('./views/card/default-card/default-card.module').then(
+      (m) => m.DefaultCardModule
     ),
 });
 

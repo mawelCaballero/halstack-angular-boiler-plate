@@ -12,4 +12,8 @@ export class CardWithActionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  click() {
+    console.log("click");
+  }
+
 }
