@@ -3,6 +3,46 @@ import { Routes, RouterModule } from '@angular/router';
 import { ButtonModesComponent } from './views/button/button-modes/button-modes.component';
 
 let routes: Routes = [];
+routes.push({
+  path: 'accordionWithAssistiveText',
+  loadChildren: () =>
+    import('./views/accordion/accordion-with-assistive-text/accordion-with-assistive-text.module').then(
+      (m) => m.AccordionWithAssistiveTextModule
+    ),
+});
+
+routes.push({
+  path: 'accordionWithIcon',
+  loadChildren: () =>
+    import('./views/accordion/accordion-with-icon/accordion-with-icon.module').then(
+      (m) => m.AccordionWithIconModule
+    ),
+});
+
+routes.push({
+  path: 'controlledAccordion',
+  loadChildren: () =>
+    import('./views/accordion/controlled-accordion/controlled-accordion.module').then(
+      (m) => m.ControlledAccordionModule
+    ),
+});
+
+routes.push({
+  path: 'defaultAccordion',
+  loadChildren: () =>
+    import('./views/accordion/default-accordion/default-accordion.module').then(
+      (m) => m.DefaultAccordionModule
+    ),
+});
+
+routes.push({
+  path: 'disabledIconAccordion',
+  loadChildren: () =>
+    import('./views/accordion/disabled-icon/disabled-icon.module').then(
+      (m) => m.DisabledIconModule
+    ),
+});
+
 
 routes.push({
   path: 'controlledAccordionGroup',

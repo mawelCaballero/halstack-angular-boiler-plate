@@ -11,5 +11,8 @@ export class DefaultAccordionComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  accordionClicked() {
+    console.log("Default Accordion Clicked");
+  }
 
 }

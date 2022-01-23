@@ -11,5 +11,8 @@ export class AccordionWithAssistiveTextComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  accordionClicked() {
+    console.log("Accordion with assistive text Clicked");
+  }
 
 }

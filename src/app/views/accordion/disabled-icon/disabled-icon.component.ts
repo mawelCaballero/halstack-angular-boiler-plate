@@ -11,5 +11,8 @@ export class DisabledIconComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  accordionClicked() {
+    console.log("Disabled Accordion Clicked");
+  }
 
 }
