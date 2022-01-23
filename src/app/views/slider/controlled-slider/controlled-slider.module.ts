@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ControlledSliderComponent } from './controlled-slider.component';
 import { DxcSliderModule, ThemeModule } from '@dxc-technology/halstack-angular';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -10,7 +11,13 @@ import { DxcSliderModule, ThemeModule } from '@dxc-technology/halstack-angular';
   imports: [
     CommonModule,
     ThemeModule,
-    DxcSliderModule
-  ],exports: [ControlledSliderComponent]
+    DxcSliderModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: ControlledSliderComponent,
+      },
+    ])
+  ]
 })
 export class ControlledSliderModule { }

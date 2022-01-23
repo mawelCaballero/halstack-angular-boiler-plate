@@ -759,9 +759,9 @@ routes.push({
 routes.push({
   path: 'radioGroup',
   loadChildren: () =>
-    import(
-      './views/radio-button/radio-group/radio-group.module'
-    ).then((m) => m.RadioGroupModule),
+    import('./views/radio-button/radio-group/radio-group.module').then(
+      (m) => m.RadioGroupModule
+    ),
 });
 
 routes.push({
@@ -775,9 +775,9 @@ routes.push({
 routes.push({
   path: 'radioSized',
   loadChildren: () =>
-    import(
-      './views/radio-button/radio-sized/radio-sized.module'
-    ).then((m) => m.RadioSizedModule),
+    import('./views/radio-button/radio-sized/radio-sized.module').then(
+      (m) => m.RadioSizedModule
+    ),
 });
 
 routes.push({
@@ -801,9 +801,9 @@ routes.push({
 routes.push({
   path: 'default-sidenav',
   loadChildren: () =>
-    import(
-      './views/sidenav/default-sidenav/default-sidenav.module'
-    ).then((m) => m.DefaultSidenavModule),
+    import('./views/sidenav/default-sidenav/default-sidenav.module').then(
+      (m) => m.DefaultSidenavModule
+    ),
 });
 
 routes.push({
@@ -815,14 +815,70 @@ routes.push({
 });
 
 // //Slider
-// routes.push({ path: 'continuous-slider', component: ContinuousSliderComponent});
-// routes.push({ path: 'controlled-slider', component: ControlledSliderComponent});
-// routes.push({ path: 'disabled-slider', component: DisabledSliderComponent});
-// routes.push({ path: 'discrete-slider', component: DiscreteSliderComponent});
-// routes.push({ path: 'sized-slider', component: SizedSliderComponent});
-// routes.push({ path: 'slider-no-limit-values', component: SliderNoLimitValuesComponent});
-// routes.push({ path: 'slider-with-input', component: SliderWithInputComponent});
-// routes.push({ path: 'uncontrolled-slider', component: UncontrolledSliderComponent});
+
+routes.push({
+  path: 'continuous-slider',
+  loadChildren: () =>
+    import(
+      './views/slider/continuous-slider/continuous-slider.module'
+    ).then((m) => m.ContinuousSliderModule),
+});
+
+routes.push({
+  path: 'controlled-slider',
+  loadChildren: () =>
+    import(
+      './views/slider/controlled-slider/controlled-slider.module'
+    ).then((m) => m.ControlledSliderModule),
+});
+
+routes.push({
+  path: 'disabled-slider',
+  loadChildren: () =>
+    import(
+      './views/slider/disabled-slider/disabled-slider.module'
+    ).then((m) => m.DisabledSliderModule),
+});
+
+routes.push({
+  path: 'discrete-slider',
+  loadChildren: () =>
+    import(
+      './views/slider/discrete-slider/discrete-slider.module'
+    ).then((m) => m.DiscreteSliderModule),
+});
+
+routes.push({
+  path: 'sized-slider',
+  loadChildren: () =>
+    import(
+      './views/slider/sized-slider/sized-slider.module'
+    ).then((m) => m.SizedSliderModule),
+});
+
+routes.push({
+  path: 'slider-no-limit-values',
+  loadChildren: () =>
+    import(
+      './views/slider/slider-no-limit-values/slider-no-limit-values.module'
+    ).then((m) => m.SliderNoLimitValuesModule),
+});
+
+routes.push({
+  path: 'slider-with-input',
+  loadChildren: () =>
+    import(
+      './views/slider/slider-with-input/slider-with-input.module'
+    ).then((m) => m.SliderWithInputModule),
+});
+
+routes.push({
+  path: 'uncontrolled-slider',
+  loadChildren: () =>
+    import(
+      './views/slider/uncontrolled-slider/uncontrolled-slider.module'
+    ).then((m) => m.UncontrolledSliderModule),
+});
 
 // //Spinner
 // routes.push({ path: 'determined-spinner', component: DeterminedSpinnerComponent});
