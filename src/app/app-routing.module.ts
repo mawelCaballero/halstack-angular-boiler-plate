@@ -796,11 +796,23 @@ routes.push({
       './views/resultset-table/default-resultset-table/default-resultset-table.module'
     ).then((m) => m.DefaultResultsetTableModule),
 });
-// routes.push({ path: 'resultset-table', component: DefaultResultsetTableComponent});
 
 // //Sidenav
-// routes.push({ path: 'default-sidenav', component: DefaultSidenavComponent});
-// routes.push({ path: 'sidenav-with-children', component: SidenavWithChildrenComponent});
+routes.push({
+  path: 'default-sidenav',
+  loadChildren: () =>
+    import(
+      './views/sidenav/default-sidenav/default-sidenav.module'
+    ).then((m) => m.DefaultSidenavModule),
+});
+
+routes.push({
+  path: 'sidenav-with-children',
+  loadChildren: () =>
+    import(
+      './views/sidenav/sidenav-with-children/sidenav-with-children.module'
+    ).then((m) => m.SidenavWithChildrenModule),
+});
 
 // //Slider
 // routes.push({ path: 'continuous-slider', component: ContinuousSliderComponent});

@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { DefaultSidenavComponent } from './default-sidenav.component';
 import { DxcSideNavModule, ThemeModule } from '@dxc-technology/halstack-angular';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
   declarations: [DefaultSidenavComponent],
   imports: [
-    CommonModule,
     ThemeModule,
-    DxcSideNavModule
-  ], exports: [DefaultSidenavComponent]
+    DxcSideNavModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: DefaultSidenavComponent,
+      },
+    ])
+  ]
 })
 export class DefaultSidenavModule { }
