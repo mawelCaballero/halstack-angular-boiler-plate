@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AddTabsDynamicallyComponent } from './add-tabs-dynamically.component';
-import { DxcButtonModule, DxcTabsModule, ThemeModule } from '@dxc-technology/halstack-angular';
-
-
+import {
+  DxcButtonModule,
+  DxcTabsModule,
+  ThemeModule,
+} from '@dxc-technology/halstack-angular';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AddTabsDynamicallyComponent],
@@ -11,7 +14,13 @@ import { DxcButtonModule, DxcTabsModule, ThemeModule } from '@dxc-technology/hal
     CommonModule,
     ThemeModule,
     DxcTabsModule,
-    DxcButtonModule
-  ],exports: [AddTabsDynamicallyComponent]
+    DxcButtonModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: AddTabsDynamicallyComponent,
+      },
+    ]),
+  ],
 })
-export class AddTabsDynamicallyModule { }
+export class AddTabsDynamicallyModule {}

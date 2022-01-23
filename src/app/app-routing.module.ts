@@ -952,10 +952,37 @@ routes.push({
 });
 
 // //Tabs
-// routes.push({ path:'add-tabs-dynamically', component: AddTabsDynamicallyComponent});
-// routes.push({ path:'controlled-tabs', component: ControlledTabsComponent});
-// routes.push({ path:'tabs-with-content', component: TabsWithContentComponent});
-// routes.push({ path:'uncontrolled-tabs', component: UncontrolledTabsComponent});
+routes.push({
+  path: 'add-tabs-dynamically',
+  loadChildren: () =>
+    import(
+      './views/tabs/add-tabs-dynamically/add-tabs-dynamically.module'
+    ).then((m) => m.AddTabsDynamicallyModule),
+});
+
+routes.push({
+  path: 'controlled-tabs',
+  loadChildren: () =>
+    import('./views/tabs/controlled-tabs/controlled-tabs.module').then(
+      (m) => m.ControlledTabsModule
+    ),
+});
+
+routes.push({
+  path: 'tabs-with-content',
+  loadChildren: () =>
+    import('./views/tabs/tabs-with-content/tabs-with-content.module').then(
+      (m) => m.TabsWithContentModule
+    ),
+});
+
+routes.push({
+  path: 'uncontrolled-tabs',
+  loadChildren: () =>
+    import('./views/tabs/uncontrolled-tabs/uncontrolled-tabs.module').then(
+      (m) => m.UncontrolledTabsModule
+    ),
+});
 
 // //Tags
 // routes.push({ path:'basic-tag', component: BasicTagComponent});
