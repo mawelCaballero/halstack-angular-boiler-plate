@@ -670,9 +670,13 @@ routes.push({
     ).then((m) => m.UncontrolledNumberModule),
 });
 
-// //Paginator
-// routes.push({ path: 'default-paginator', component: PaginatorComponent});
-
+routes.push({
+  path: 'defaultPaginator',
+  loadChildren: () =>
+    import(
+      './views/paginator/paginator/default-paginator.module'
+    ).then((m) => m.DefaultPaginatorModule),
+});
 // //Password
 // routes.push({ path: 'controlled-password', component: ControlledPasswordComponent });
 // routes.push({ path: 'custom-error-password', component: CustomErrorPasswordComponent });
