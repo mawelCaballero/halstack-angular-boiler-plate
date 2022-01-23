@@ -1,1 +1,33 @@
-<p>chip-with-icons works!</p>
+<div theme>
+  <div style="display: flex; flex-direction: column;">
+    <dxc-chip
+      [prefixIconSrc]="iconPath"
+      label="Chip with prefix"
+      margin="small"
+      (prefixIconClick)="onClick()"
+      [disabled]="true"
+    ></dxc-chip>
+
+    <dxc-chip
+      [suffixIconSrc]="iconPath"
+      label="Chip with suffix"
+      margin="small"
+      (suffixIconClick)="onClick()"
+    ></dxc-chip>
+
+    <dxc-chip
+      [prefixIconSrc]="iconPath"
+      [suffixIconSrc]="iconPath"
+      label="Chip with both"
+      margin="small"
+      (suffixIconClick)="onClick()"
+      (prefixIconClick)="onClick()"
+    ></dxc-chip>
+
+    <dxc-chip
+      [prefixIconSrc]="iconPath"
+      margin="small"
+      (prefixIconClick)="onClick()"
+    ></dxc-chip>
+  </div>
+</div>

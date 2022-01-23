@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChipWithIconsComponent implements OnInit {
 
-  constructor() { }
+  iconPath = "https://img.icons8.com/android/24/000000/twitter.png";
 
   ngOnInit(): void {
   }
 
+  onClick() {
+    console.log("Click");
+  }
 }

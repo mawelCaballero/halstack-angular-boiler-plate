@@ -213,6 +213,22 @@ routes.push({
 });
 
 //Chip
+routes.push({
+  path: 'defaultChip',
+  loadChildren: () =>
+    import('./views/chip/default-chip/default-chip.module').then(
+      (m) => m.DefaultChipModule
+    ),
+});
+
+routes.push({
+  path: 'chipWithIcons',
+  loadChildren: () =>
+    import('./views/chip/chip-with-icons/chip-with-icons.module').then(
+      (m) => m.ChipWithIconsModule
+    ),
+});
+
 
 //Date
 routes.push({
