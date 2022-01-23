@@ -4,6 +4,7 @@ import { ButtonModesComponent } from './views/button/button-modes/button-modes.c
 import { ProgressBarWithOverlayModule } from './views/progress-bar/progress-bar-with-overlay/progress-bar-with-overlay.module';
 import { RadioLabelPositionModule } from './views/radio-button/radio-label-position/radio-label-position.module';
 import { BasicToggleGroupModule } from './views/toggle-group/basic-toggle-group/basic-toggle-group.module';
+import { DefaultUploadModule } from './views/uplodad/default-upload/default-upload.module';
 
 let routes: Routes = [];
 routes.push({
@@ -1279,7 +1280,13 @@ routes.push({
 });
 
 // //Upload
-// routes.push({ path: 'default-upload', component: DefaultUploadComponent});
+routes.push({
+  path: 'default-upload',
+  loadChildren: () =>
+    import('./views/uplodad/default-upload/default-upload.module').then(
+      (m) => m.DefaultUploadModule
+    ), //
+});
 
 // //V3 Select
 routes.push({
