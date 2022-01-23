@@ -985,10 +985,37 @@ routes.push({
 });
 
 // //Tags
-// routes.push({ path:'basic-tag', component: BasicTagComponent});
-// routes.push({ path:'sized-tag', component: SizedTagComponent});
-// routes.push({ path:'tag-with-icon', component: TagWithIconComponent});
-// routes.push({ path:'tag-with-link', component: TagWithLinkComponent});
+routes.push({
+  path: 'basic-tag',
+  loadChildren: () =>
+    import('./views/tag/basic-tag/basic-tag.module').then(
+      (m) => m.BasicTagModule
+    ),
+});
+
+routes.push({
+  path: 'sized-tag',
+  loadChildren: () =>
+    import('./views/tag/sized-tag/sized-tag.module').then(
+      (m) => m.SizedTagModule
+    ),
+});
+
+routes.push({
+  path: 'tag-with-icon',
+  loadChildren: () =>
+    import('./views/tag/tag-with-icon/tag-with-icon.module').then(
+      (m) => m.TagWithIconModule
+    ),
+});
+
+routes.push({
+  path: 'tag-with-link',
+  loadChildren: () =>
+    import('./views/tag/tag-with-link/tag-with-link.module').then(
+      (m) => m.TagWithLinkModule
+    ),
+});
 
 // //TextInput
 // routes.push({ path:'controlled-input', component: ControlledInputComponent});
