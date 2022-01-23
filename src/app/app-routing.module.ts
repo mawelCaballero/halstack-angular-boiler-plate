@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ButtonModesComponent } from './views/button/button-modes/button-modes.component';
 import { ProgressBarWithOverlayModule } from './views/progress-bar/progress-bar-with-overlay/progress-bar-with-overlay.module';
 import { RadioLabelPositionModule } from './views/radio-button/radio-label-position/radio-label-position.module';
+import { BasicToggleGroupModule } from './views/toggle-group/basic-toggle-group/basic-toggle-group.module';
 
 let routes: Routes = [];
 routes.push({
@@ -1244,10 +1245,38 @@ routes.push({
 });
 
 // //Toogle-Group
-// routes.push({ path: 'basic-toogle-group', component: BasicToggleGroupComponent});
-// routes.push({ path: 'controlled-toggle-group', component: ControlledToggleGroupComponent});
-// routes.push({ path: 'disabled-toggle-group', component: DisabledToggleGroupComponent});
-// routes.push({ path: 'multiple-toggle-group', component: MultipleToggleGroupComponent});
+
+routes.push({
+  path: 'basic-toogle-group',
+  loadChildren: () =>
+    import(
+      './views/toggle-group/basic-toggle-group/basic-toggle-group.module'
+    ).then((m) => m.BasicToggleGroupModule), //
+});
+
+routes.push({
+  path: 'controlled-toggle-group',
+  loadChildren: () =>
+    import(
+      './views/toggle-group/controlled-toggle-group/controlled-toggle-group.module'
+    ).then((m) => m.ControlledToggleGroupModule), //
+});
+
+routes.push({
+  path: 'disabled-toggle-group',
+  loadChildren: () =>
+    import(
+      './views/toggle-group/disabled-toggle-group/disabled-toggle-group.module'
+    ).then((m) => m.DisabledToggleGroupModule), //
+});
+
+routes.push({
+  path: 'multiple-toggle-group',
+  loadChildren: () =>
+    import(
+      './views/toggle-group/multiple-toggle-group/multiple-toggle-group.module'
+    ).then((m) => m.MultipleToggleGroupModule), //
+});
 
 // //Upload
 // routes.push({ path: 'default-upload', component: DefaultUploadComponent});
