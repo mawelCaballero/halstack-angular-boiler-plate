@@ -1,17 +1,21 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RadioGroupComponent } from './radio-group.component';
 import { DxcRadioModule, ThemeModule } from '@dxc-technology/halstack-angular';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
   declarations: [RadioGroupComponent],
   imports: [
-    CommonModule,
     ThemeModule,
-    DxcRadioModule
-
-  ],exports: [RadioGroupComponent]
+    DxcRadioModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: RadioGroupComponent,
+      },
+    ])
+  ]
 })
 export class RadioGroupModule { }

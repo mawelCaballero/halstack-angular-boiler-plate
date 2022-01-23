@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ButtonModesComponent } from './views/button/button-modes/button-modes.component';
 import { ProgressBarWithOverlayModule } from './views/progress-bar/progress-bar-with-overlay/progress-bar-with-overlay.module';
+import { RadioLabelPositionModule } from './views/radio-button/radio-label-position/radio-label-position.module';
 
 let routes: Routes = [];
 routes.push({
@@ -722,7 +723,6 @@ routes.push({
     ).then((m) => m.UncontrolledPasswordModule),
 });
 
-
 // //ProgressBar
 routes.push({
   path: 'determinateDefaultProgressBar',
@@ -749,13 +749,53 @@ routes.push({
 });
 
 // //RadioButton
-// routes.push({ path: 'radio-controlled', component: RadioControlledComponent});
-// routes.push({ path: 'radio-group', component: RadioGroupComponent });
-// routes.push({ path: 'radio-label-position', component: RadioLabelPositionComponent });
-// routes.push({ path: 'radio-sized', component: RadioSizedComponent });
-// routes.push({ path: 'radio-uncontrolled', component: RadioUncontrolledComponent });
+routes.push({
+  path: 'radioControlled',
+  loadChildren: () =>
+    import(
+      './views/radio-button/radio-controlled/radio-controlled.module'
+    ).then((m) => m.RadioControlledModule),
+});
+routes.push({
+  path: 'radioGroup',
+  loadChildren: () =>
+    import(
+      './views/radio-button/radio-group/radio-group.module'
+    ).then((m) => m.RadioGroupModule),
+});
+
+routes.push({
+  path: 'radioLabelPosition',
+  loadChildren: () =>
+    import(
+      './views/radio-button/radio-label-position/radio-label-position.module'
+    ).then((m) => m.RadioLabelPositionModule),
+});
+
+routes.push({
+  path: 'radioSized',
+  loadChildren: () =>
+    import(
+      './views/radio-button/radio-sized/radio-sized.module'
+    ).then((m) => m.RadioSizedModule),
+});
+
+routes.push({
+  path: 'radioUncontrolled',
+  loadChildren: () =>
+    import(
+      './views/radio-button/radio-uncontrolled/radio-uncontrolled.module'
+    ).then((m) => m.RadioUncontrolledModule),
+});
 
 // //Resultset Table
+routes.push({
+  path: 'defaultResultsetTable',
+  loadChildren: () =>
+    import(
+      './views/resultset-table/default-resultset-table/default-resultset-table.module'
+    ).then((m) => m.DefaultResultsetTableModule),
+});
 // routes.push({ path: 'resultset-table', component: DefaultResultsetTableComponent});
 
 // //Sidenav
