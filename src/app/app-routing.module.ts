@@ -911,9 +911,27 @@ routes.push({
 });
 
 // //Switch
-// routes.push({ path: 'controlled-switch', component: ControlledSwitchComponent});
-// routes.push({ path: 'label-position-switch', component: LabelPositionSwitchComponent});
-// routes.push({ path: 'uncontrolled-switch', component: UncontrolledSwitchComponent});
+routes.push({
+  path: 'controlled-switch',
+  loadChildren: () =>
+    import('./views/switch/controlled-switch/controlled-switch.module').then(
+      (m) => m.ControlledSwitchModule
+    ),
+});
+routes.push({
+  path: 'label-position-switch',
+  loadChildren: () =>
+    import(
+      './views/switch/label-position-switch/label-position-switch.module'
+    ).then((m) => m.LabelPositionSwitchModule),
+});
+routes.push({
+  path: 'uncontrolled-switch',
+  loadChildren: () =>
+    import(
+      './views/switch/uncontrolled-switch/uncontrolled-switch.module'
+    ).then((m) => m.UncontrolledSwitchModule),
+});
 
 // //TabbedSection
 // routes.push({ path: 'default-tabbed-section', component: DefaultTabbedSectionComponent});
