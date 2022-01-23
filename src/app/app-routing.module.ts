@@ -93,6 +93,22 @@ routes.push({
     ),
 });
 
+routes.push({
+  path: 'basicLayout',
+  loadChildren: () =>
+    import('./views/application-layout/basic-layout/basic-layout.module').then(
+      (m) => m.BasicLayoutModule
+    ),
+});
+
+routes.push({
+  path: 'layoutWithSidenav',
+  loadChildren: () =>
+    import('./views/application-layout/layout-with-sidenav/layout-with-sidenav.module').then(
+      (m) => m.LayoutWithSidenavModule
+    ),
+});
+
 routes.push({ path: '', redirectTo: 'buttonModes', pathMatch: 'full' });
 //Button
 routes.push({ path: 'buttonModes', component: ButtonModesComponent });
@@ -118,15 +134,6 @@ routes.push({
     ),
 });
 
-//Accordion
-//routes.push({ path: 'accordionWithAssistiveText', loadChildren: () => import('./views/accordion/accordion-with-assistive-text/accordion-with-assistive-text.module').then(m => m.TextInputFunctionSuggestionsModule) });
-
-//AccordionGroup
-
-//Alert
-
-//ApplicationLayout
-
 //Autosuggest
 routes.push({
   path: 'autosuggestInput',
@@ -143,11 +150,6 @@ routes.push({
     ).then((m) => m.TextInputWithSuggestionsModule),
 });
 
-//Box
-
-//Card
-
-//Checkbox
 routes.push({
   path: 'checkboxControlled',
   loadChildren: () =>
