@@ -4,8 +4,6 @@ import { SliderNoLimitValuesComponent } from './slider-no-limit-values.component
 import { DxcSliderModule, ThemeModule } from '@dxc-technology/halstack-angular';
 import { RouterModule } from '@angular/router';
 
-
-
 @NgModule({
   declarations: [SliderNoLimitValuesComponent],
   imports: [
@@ -17,7 +15,7 @@ import { RouterModule } from '@angular/router';
         path: '',
         component: SliderNoLimitValuesComponent,
       },
-    ])
-  ]
+    ]),
+  ],
 })
-export class SliderNoLimitValuesModule { }
+export class SliderNoLimitValuesModule {}

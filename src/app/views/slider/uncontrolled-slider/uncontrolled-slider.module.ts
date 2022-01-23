@@ -4,8 +4,6 @@ import { UncontrolledSliderComponent } from './uncontrolled-slider.component';
 import { DxcSliderModule, ThemeModule } from '@dxc-technology/halstack-angular';
 import { RouterModule } from '@angular/router';
 
-
-
 @NgModule({
   declarations: [UncontrolledSliderComponent],
   imports: [
@@ -17,7 +15,7 @@ import { RouterModule } from '@angular/router';
         path: '',
         component: UncontrolledSliderComponent,
       },
-    ])
-  ]
+    ]),
+  ],
 })
-export class UncontrolledSliderModule { }
+export class UncontrolledSliderModule {}

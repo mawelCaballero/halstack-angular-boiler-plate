@@ -4,8 +4,6 @@ import { DiscreteSliderComponent } from './discrete-slider.component';
 import { DxcSliderModule, ThemeModule } from '@dxc-technology/halstack-angular';
 import { RouterModule } from '@angular/router';
 
-
-
 @NgModule({
   declarations: [DiscreteSliderComponent],
   imports: [
@@ -17,7 +15,7 @@ import { RouterModule } from '@angular/router';
         path: '',
         component: DiscreteSliderComponent,
       },
-    ])
-  ]
+    ]),
+  ],
 })
-export class DiscreteSliderModule { }
+export class DiscreteSliderModule {}

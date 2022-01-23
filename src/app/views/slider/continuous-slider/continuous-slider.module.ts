@@ -4,8 +4,6 @@ import { ContinuousSliderComponent } from './continuous-slider.component';
 import { DxcSliderModule, ThemeModule } from '@dxc-technology/halstack-angular';
 import { RouterModule } from '@angular/router';
 
-
-
 @NgModule({
   declarations: [ContinuousSliderComponent],
   imports: [
@@ -17,7 +15,7 @@ import { RouterModule } from '@angular/router';
         path: '',
         component: ContinuousSliderModule,
       },
-    ])
-  ]
+    ]),
+  ],
 })
-export class ContinuousSliderModule { }
+export class ContinuousSliderModule {}

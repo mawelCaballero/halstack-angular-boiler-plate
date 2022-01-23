@@ -4,8 +4,6 @@ import { SliderWithInputComponent } from './slider-with-input.component';
 import { DxcSliderModule, ThemeModule } from '@dxc-technology/halstack-angular';
 import { RouterModule } from '@angular/router';
 
-
-
 @NgModule({
   declarations: [SliderWithInputComponent],
   imports: [
@@ -17,7 +15,7 @@ import { RouterModule } from '@angular/router';
         path: '',
         component: SliderWithInputComponent,
       },
-    ])
-  ]
+    ]),
+  ],
 })
-export class SliderWithInputModule { }
+export class SliderWithInputModule {}

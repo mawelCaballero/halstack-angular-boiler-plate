@@ -819,41 +819,41 @@ routes.push({
 routes.push({
   path: 'continuous-slider',
   loadChildren: () =>
-    import(
-      './views/slider/continuous-slider/continuous-slider.module'
-    ).then((m) => m.ContinuousSliderModule),
+    import('./views/slider/continuous-slider/continuous-slider.module').then(
+      (m) => m.ContinuousSliderModule
+    ),
 });
 
 routes.push({
   path: 'controlled-slider',
   loadChildren: () =>
-    import(
-      './views/slider/controlled-slider/controlled-slider.module'
-    ).then((m) => m.ControlledSliderModule),
+    import('./views/slider/controlled-slider/controlled-slider.module').then(
+      (m) => m.ControlledSliderModule
+    ),
 });
 
 routes.push({
   path: 'disabled-slider',
   loadChildren: () =>
-    import(
-      './views/slider/disabled-slider/disabled-slider.module'
-    ).then((m) => m.DisabledSliderModule),
+    import('./views/slider/disabled-slider/disabled-slider.module').then(
+      (m) => m.DisabledSliderModule
+    ),
 });
 
 routes.push({
   path: 'discrete-slider',
   loadChildren: () =>
-    import(
-      './views/slider/discrete-slider/discrete-slider.module'
-    ).then((m) => m.DiscreteSliderModule),
+    import('./views/slider/discrete-slider/discrete-slider.module').then(
+      (m) => m.DiscreteSliderModule
+    ),
 });
 
 routes.push({
   path: 'sized-slider',
   loadChildren: () =>
-    import(
-      './views/slider/sized-slider/sized-slider.module'
-    ).then((m) => m.SizedSliderModule),
+    import('./views/slider/sized-slider/sized-slider.module').then(
+      (m) => m.SizedSliderModule
+    ),
 });
 
 routes.push({
@@ -867,9 +867,9 @@ routes.push({
 routes.push({
   path: 'slider-with-input',
   loadChildren: () =>
-    import(
-      './views/slider/slider-with-input/slider-with-input.module'
-    ).then((m) => m.SliderWithInputModule),
+    import('./views/slider/slider-with-input/slider-with-input.module').then(
+      (m) => m.SliderWithInputModule
+    ),
 });
 
 routes.push({
@@ -881,10 +881,34 @@ routes.push({
 });
 
 // //Spinner
-// routes.push({ path: 'determined-spinner', component: DeterminedSpinnerComponent});
-// routes.push({ path: 'small-spinner', component: SmallSpinnerComponent});
-// routes.push({ path: 'spinner-with-overlay', component: SpinnerWithOverlayComponent});
-// routes.push({ path: 'undetermined-spinner', component: UndeterminedSpinnerComponent});
+routes.push({
+  path: 'determined-spinner',
+  loadChildren: () =>
+    import('./views/spinner/determined-spinner/determined-spinner.module').then(
+      (m) => m.DeterminedSpinnerModule
+    ),
+});
+routes.push({
+  path: 'small-spinner',
+  loadChildren: () =>
+    import('./views/spinner/small-spinner/small-spinner.module').then(
+      (m) => m.SmallSpinnerModule
+    ),
+});
+routes.push({
+  path: 'spinner-with-overlay',
+  loadChildren: () =>
+    import(
+      './views/spinner/spinner-with-overlay/spinner-with-overlay.module'
+    ).then((m) => m.SpinnerWithOverlayModule),
+});
+routes.push({
+  path: 'undetermined-spinner',
+  loadChildren: () =>
+    import(
+      './views/spinner/undetermined-spinner/undetermined-spinner.module'
+    ).then((m) => m.UndeterminedSpinnerModule),
+});
 
 // //Switch
 // routes.push({ path: 'controlled-switch', component: ControlledSwitchComponent});

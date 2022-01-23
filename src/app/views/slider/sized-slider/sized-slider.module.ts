@@ -4,8 +4,6 @@ import { SizedSliderComponent } from './sized-slider.component';
 import { DxcSliderModule, ThemeModule } from '@dxc-technology/halstack-angular';
 import { RouterModule } from '@angular/router';
 
-
-
 @NgModule({
   declarations: [SizedSliderComponent],
   imports: [
@@ -17,7 +15,7 @@ import { RouterModule } from '@angular/router';
         path: '',
         component: SizedSliderComponent,
       },
-    ])
-  ]
+    ]),
+  ],
 })
-export class SizedSliderModule { }
+export class SizedSliderModule {}

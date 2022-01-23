@@ -5,8 +5,6 @@ import { DxcSliderModule, ThemeModule } from '@dxc-technology/halstack-angular';
 import { RouterModule } from '@angular/router';
 import { ControlledSliderComponent } from '../controlled-slider/controlled-slider.component';
 
-
-
 @NgModule({
   declarations: [DisabledSliderComponent],
   imports: [
@@ -18,7 +16,7 @@ import { ControlledSliderComponent } from '../controlled-slider/controlled-slide
         path: '',
         component: ControlledSliderComponent,
       },
-    ])
-  ]
+    ]),
+  ],
 })
-export class DisabledSliderModule { }
+export class DisabledSliderModule {}
