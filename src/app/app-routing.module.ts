@@ -934,7 +934,13 @@ routes.push({
 });
 
 // //TabbedSection
-// routes.push({ path: 'default-tabbed-section', component: DefaultTabbedSectionComponent});
+routes.push({
+  path: 'default-tabbed-section',
+  loadChildren: () =>
+    import(
+      './views/tabbed-section/default-tabbed-section/default-tabbed-section.module'
+    ).then((m) => m.DefaultTabbedSectionModule),
+});
 
 // //Table
 // routes.push({ path: 'simple-table', component: SimpleTableComponent});
