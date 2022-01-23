@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ButtonModesComponent } from './views/button/button-modes/button-modes.component';
-import { ProgressBarWithOverlayModule } from './views/progress-bar/progress-bar-with-overlay/progress-bar-with-overlay.module';
-import { RadioLabelPositionModule } from './views/radio-button/radio-label-position/radio-label-position.module';
-import { BasicToggleGroupModule } from './views/toggle-group/basic-toggle-group/basic-toggle-group.module';
-import { DefaultUploadModule } from './views/uplodad/default-upload/default-upload.module';
+import { ControlledWizardModule } from './views/wizard/controlled-wizard/controlled-wizard.module';
 
 let routes: Routes = [];
 routes.push({
@@ -1413,7 +1410,32 @@ routes.push({
     ),
 });
 
-// Hi Jiale and Aida
+//Wizard
+
+routes.push({
+  path: 'controlled-wizard',
+  loadChildren: () =>
+    import('./views/wizard/controlled-wizard/controlled-wizard.module').then(
+      (m) => m.ControlledWizardModule
+    ),
+});
+
+routes.push({
+  path: 'uncontrolled-wizard',
+  loadChildren: () =>
+    import(
+      './views/wizard/uncontrolled-wizard/uncontrolled-wizard.module'
+    ).then((m) => m.UncontrolledWizardModule),
+});
+
+routes.push({
+  path: 'vertical-wizard',
+  loadChildren: () =>
+    import('./views/wizard/vertical-wizard/vertical-wizard.module').then(
+      (m) => m.VerticalWizardModule
+    ),
+});
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
