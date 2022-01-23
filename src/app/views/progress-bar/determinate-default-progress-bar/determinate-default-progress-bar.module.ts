@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { DxcProgressbarModule, ThemeModule } from '@dxc-technology/halstack-angular';
 import { DeterminateDefaultProgressBarComponent } from './determinate-default-progress-bar.component';
 
@@ -8,9 +8,13 @@ import { DeterminateDefaultProgressBarComponent } from './determinate-default-pr
 @NgModule({
   declarations: [DeterminateDefaultProgressBarComponent],
   imports: [
-    CommonModule,
     ThemeModule,
-    DxcProgressbarModule
-  ], exports: [DeterminateDefaultProgressBarComponent]
+    DxcProgressbarModule, ThemeModule, RouterModule.forChild([
+      {
+        path: '',
+        component: DeterminateDefaultProgressBarComponent,
+      },
+    ])
+  ]
 })
 export class DeterminateDefaultProgressBarModule { }

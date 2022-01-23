@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ButtonModesComponent } from './views/button/button-modes/button-modes.component';
+import { ProgressBarWithOverlayModule } from './views/progress-bar/progress-bar-with-overlay/progress-bar-with-overlay.module';
 
 let routes: Routes = [];
 routes.push({
@@ -721,12 +722,31 @@ routes.push({
     ).then((m) => m.UncontrolledPasswordModule),
 });
 
-// routes.push({ path: 'uncontrolled-password', component: UncontrolledPasswordComponent });
 
 // //ProgressBar
-// routes.push({ path: 'determinate-default-progress-bar', component: DeterminateDefaultProgressBarComponent});
-// routes.push({ path: 'progress-bar-with-overlay', component: ProgressBarWithOverlayComponent });
-// routes.push({ path: 'undeterminate-default-progress-bar', component: UndeterminateDefaultProgressBarComponent });
+routes.push({
+  path: 'determinateDefaultProgressBar',
+  loadChildren: () =>
+    import(
+      './views/progress-bar/determinate-default-progress-bar/determinate-default-progress-bar.module'
+    ).then((m) => m.DeterminateDefaultProgressBarModule),
+});
+
+routes.push({
+  path: 'progressBarWithOverlay',
+  loadChildren: () =>
+    import(
+      './views/progress-bar/progress-bar-with-overlay/progress-bar-with-overlay.module'
+    ).then((m) => m.ProgressBarWithOverlayModule),
+});
+
+routes.push({
+  path: 'undeterminateDefaultProgressBar',
+  loadChildren: () =>
+    import(
+      './views/progress-bar/undeterminate-default-progress-bar/undeterminate-default-progress-bar.module'
+    ).then((m) => m.UndeterminateDefaultProgressBarModule),
+});
 
 // //RadioButton
 // routes.push({ path: 'radio-controlled', component: RadioControlledComponent});
