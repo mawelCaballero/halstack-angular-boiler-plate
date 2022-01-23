@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LengthConstraintPasswordComponent } from './length-constraint-password.component';
 import { DxcPasswordInputModule, ThemeModule } from '@dxc-technology/halstack-angular';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -10,7 +11,13 @@ import { DxcPasswordInputModule, ThemeModule } from '@dxc-technology/halstack-an
   imports: [
     CommonModule,
     ThemeModule,
-    DxcPasswordInputModule
-  ], exports: [LengthConstraintPasswordComponent]
+    DxcPasswordInputModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: LengthConstraintPasswordComponent,
+      },
+    ])
+  ]
 })
 export class LengthConstraintPasswordModule { }

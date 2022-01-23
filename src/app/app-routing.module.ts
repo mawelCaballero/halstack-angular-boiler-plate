@@ -6,25 +6,25 @@ let routes: Routes = [];
 routes.push({
   path: 'accordionWithAssistiveText',
   loadChildren: () =>
-    import('./views/accordion/accordion-with-assistive-text/accordion-with-assistive-text.module').then(
-      (m) => m.AccordionWithAssistiveTextModule
-    ),
+    import(
+      './views/accordion/accordion-with-assistive-text/accordion-with-assistive-text.module'
+    ).then((m) => m.AccordionWithAssistiveTextModule),
 });
 
 routes.push({
   path: 'accordionWithIcon',
   loadChildren: () =>
-    import('./views/accordion/accordion-with-icon/accordion-with-icon.module').then(
-      (m) => m.AccordionWithIconModule
-    ),
+    import(
+      './views/accordion/accordion-with-icon/accordion-with-icon.module'
+    ).then((m) => m.AccordionWithIconModule),
 });
 
 routes.push({
   path: 'controlledAccordion',
   loadChildren: () =>
-    import('./views/accordion/controlled-accordion/controlled-accordion.module').then(
-      (m) => m.ControlledAccordionModule
-    ),
+    import(
+      './views/accordion/controlled-accordion/controlled-accordion.module'
+    ).then((m) => m.ControlledAccordionModule),
 });
 
 routes.push({
@@ -43,31 +43,29 @@ routes.push({
     ),
 });
 
-
 routes.push({
   path: 'controlledAccordionGroup',
   loadChildren: () =>
-    import('./views/accordion-group/controlled-accordion-group/controlled-accordion-group.module').then(
-      (m) => m.ControlledAccordionGroupModule
-    ),
+    import(
+      './views/accordion-group/controlled-accordion-group/controlled-accordion-group.module'
+    ).then((m) => m.ControlledAccordionGroupModule),
 });
 
 routes.push({
   path: 'uncontrolledAccordionGroup',
   loadChildren: () =>
-    import('./views/accordion-group/uncontrolled-accordion-group/uncontrolled-accordion-group.module').then(
-      (m) => m.UncontrolledAccordionGroupModule
-    ),
+    import(
+      './views/accordion-group/uncontrolled-accordion-group/uncontrolled-accordion-group.module'
+    ).then((m) => m.UncontrolledAccordionGroupModule),
 });
 
 routes.push({
   path: 'disabledAccordionGroup',
   loadChildren: () =>
-    import('./views/accordion-group/disabled-accordion-group/disabled-accordion-group.module').then(
-      (m) => m.DisabledAccordionGroupModule
-    ),
+    import(
+      './views/accordion-group/disabled-accordion-group/disabled-accordion-group.module'
+    ).then((m) => m.DisabledAccordionGroupModule),
 });
-
 
 routes.push({
   path: 'alertWithChildren',
@@ -80,9 +78,9 @@ routes.push({
 routes.push({
   path: 'closableInlineAlert',
   loadChildren: () =>
-    import('./views/alert/closable-inline-alert/closable-inline-alert.module').then(
-      (m) => m.ClosableInlineAlertModule
-    ),
+    import(
+      './views/alert/closable-inline-alert/closable-inline-alert.module'
+    ).then((m) => m.ClosableInlineAlertModule),
 });
 
 routes.push({
@@ -144,9 +142,9 @@ routes.push({
 routes.push({
   path: 'layoutWithSidenav',
   loadChildren: () =>
-    import('./views/application-layout/layout-with-sidenav/layout-with-sidenav.module').then(
-      (m) => m.LayoutWithSidenavModule
-    ),
+    import(
+      './views/application-layout/layout-with-sidenav/layout-with-sidenav.module'
+    ).then((m) => m.LayoutWithSidenavModule),
 });
 
 routes.push({
@@ -268,7 +266,6 @@ routes.push({
       (m) => m.ChipWithIconsModule
     ),
 });
-
 
 //Date
 routes.push({
@@ -673,16 +670,57 @@ routes.push({
 routes.push({
   path: 'defaultPaginator',
   loadChildren: () =>
-    import(
-      './views/paginator/paginator/default-paginator.module'
-    ).then((m) => m.DefaultPaginatorModule),
+    import('./views/paginator/paginator/default-paginator.module').then(
+      (m) => m.DefaultPaginatorModule
+    ),
 });
 // //Password
-// routes.push({ path: 'controlled-password', component: ControlledPasswordComponent });
-// routes.push({ path: 'custom-error-password', component: CustomErrorPasswordComponent });
-// routes.push({ path: 'fill-parent-size-password', component: FillParentSizePasswordComponent });
-// routes.push({ path: 'length-constraint-password', component: LengthConstraintPasswordComponent });
-// routes.push({ path: 'pattern-constraint-password', component: PatternConstraintPasswordComponent });
+routes.push({
+  path: 'controlledPassword',
+  loadChildren: () =>
+    import(
+      './views/password-input/controlled-password/controlled-password.module'
+    ).then((m) => m.ControlledPasswordModule),
+});
+routes.push({
+  path: 'customErrorPassword',
+  loadChildren: () =>
+    import(
+      './views/password-input/custom-error-password/custom-error-password.module'
+    ).then((m) => m.CustomErrorPasswordModule),
+});
+routes.push({
+  path: 'fillParentSizePassword',
+  loadChildren: () =>
+    import(
+      './views/password-input/fill-parent-size-password/fill-parent-size-password.module'
+    ).then((m) => m.FillParentSizePasswordModule),
+});
+
+routes.push({
+  path: 'lengthConstraintPassword',
+  loadChildren: () =>
+    import(
+      './views/password-input/length-constraint-password/length-constraint-password.module'
+    ).then((m) => m.LengthConstraintPasswordModule),
+});
+
+routes.push({
+  path: 'patternConstraintPassword',
+  loadChildren: () =>
+    import(
+      './views/password-input/pattern-constraint-password/pattern-constraint-password.module'
+    ).then((m) => m.PatternConstraintPasswordModule),
+});
+
+routes.push({
+  path: 'uncontrolledPassword',
+  loadChildren: () =>
+    import(
+      './views/password-input/uncontrolled-password/uncontrolled-password.module'
+    ).then((m) => m.UncontrolledPasswordModule),
+});
+
 // routes.push({ path: 'uncontrolled-password', component: UncontrolledPasswordComponent });
 
 // //ProgressBar

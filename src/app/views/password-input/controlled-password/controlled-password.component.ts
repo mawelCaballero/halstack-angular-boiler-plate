@@ -14,8 +14,8 @@ export class ControlledPasswordComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onChange(event) {
-    this.value = event;
+  onChange({ value, error }) {
+    this.value = value;
   }
 
   onBlur({ value, error }) {

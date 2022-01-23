@@ -15,8 +15,8 @@ export class PatternConstraintPasswordComponent implements OnInit {
   }
 
 
-  onChange(event) {
-    this.value = event;
+  onChange({ value, error }) {
+    this.value = value;
   }
 
   onBlur({ value, error }) {
