@@ -19,7 +19,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [SizedButtonComponent],
   imports: [
-    BrowserModule,
     CommonModule,
     DxcButtonModule,
     ThemeModule,
