@@ -16,7 +16,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [CheckboxUncontrolledComponent],
   imports: [
-    BrowserModule,
     CommonModule,
     ThemeModule,
     DxcCheckboxModule,

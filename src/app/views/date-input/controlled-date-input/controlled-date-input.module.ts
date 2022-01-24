@@ -15,7 +15,6 @@ const routes: Routes = [
   declarations: [ControlledDateInputComponent],
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     DxcDateInputModule,
     ThemeModule,
     RouterModule.forChild(routes),
