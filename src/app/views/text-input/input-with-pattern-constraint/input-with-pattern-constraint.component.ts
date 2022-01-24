@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class InputWithPatternConstraintComponent implements OnInit {
 
   controlledValue = "";
+  error = "";
 
   constructor() {}
 
@@ -16,10 +17,12 @@ export class InputWithPatternConstraintComponent implements OnInit {
 
   onBlur({ value, error }) {
     this.controlledValue = value;
+    this.error = error;
   }
 
   onChange({ value, error }) {
     this.controlledValue = value;
+    this.error = error;
   }
 
   click() {

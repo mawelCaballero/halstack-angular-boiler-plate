@@ -9,6 +9,7 @@ export class InputWithLengthConstraintComponent implements OnInit {
 
   controlledValue = "";
   length = { min: 5, max: 10 };
+  error = "";
 
   constructor() {}
 
@@ -17,10 +18,12 @@ export class InputWithLengthConstraintComponent implements OnInit {
 
   onBlur({ value, error }) {
     this.controlledValue = value;
+    this.error = error;
   }
 
   onChange({ value, error }) {
     this.controlledValue = value;
+    this.error = error;
   }
 
 }
