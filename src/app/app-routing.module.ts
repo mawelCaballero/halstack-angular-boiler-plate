@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ButtonModesComponent } from './views/button/button-modes/button-modes.component';
-import { ControlledWizardModule } from './views/wizard/controlled-wizard/controlled-wizard.module';
 
 let routes: Routes = [];
 routes.push({
@@ -291,7 +290,7 @@ routes.push({
     ),
 });
 
-// Date input
+//Date input
 routes.push({
   path: 'controlledDateInput',
   loadChildren: () =>
@@ -675,7 +674,8 @@ routes.push({
       (m) => m.DefaultPaginatorModule
     ),
 });
-// //Password
+
+//Password
 routes.push({
   path: 'controlledPassword',
   loadChildren: () =>
@@ -722,7 +722,7 @@ routes.push({
     ).then((m) => m.UncontrolledPasswordModule),
 });
 
-// //ProgressBar
+//ProgressBar
 routes.push({
   path: 'determinateDefaultProgressBar',
   loadChildren: () =>
@@ -747,7 +747,7 @@ routes.push({
     ).then((m) => m.UndeterminateDefaultProgressBarModule),
 });
 
-// //RadioButton
+//RadioButton
 routes.push({
   path: 'radioControlled',
   loadChildren: () =>
@@ -787,7 +787,7 @@ routes.push({
     ).then((m) => m.RadioUncontrolledModule),
 });
 
-// //Resultset Table
+//Resultset Table
 routes.push({
   path: 'defaultResultsetTable',
   loadChildren: () =>
@@ -796,9 +796,9 @@ routes.push({
     ).then((m) => m.DefaultResultsetTableModule),
 });
 
-// //Sidenav
+//Sidenav
 routes.push({
-  path: 'default-sidenav',
+  path: 'defaultSidenav',
   loadChildren: () =>
     import('./views/sidenav/default-sidenav/default-sidenav.module').then(
       (m) => m.DefaultSidenavModule
@@ -806,17 +806,16 @@ routes.push({
 });
 
 routes.push({
-  path: 'sidenav-with-children',
+  path: 'sidenavWithChildren',
   loadChildren: () =>
     import(
       './views/sidenav/sidenav-with-children/sidenav-with-children.module'
     ).then((m) => m.SidenavWithChildrenModule),
 });
 
-// //Slider
-
+//Slider
 routes.push({
-  path: 'continuous-slider',
+  path: 'continuousSlider',
   loadChildren: () =>
     import('./views/slider/continuous-slider/continuous-slider.module').then(
       (m) => m.ContinuousSliderModule
@@ -824,7 +823,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'controlled-slider',
+  path: 'controlledSlider',
   loadChildren: () =>
     import('./views/slider/controlled-slider/controlled-slider.module').then(
       (m) => m.ControlledSliderModule
@@ -832,7 +831,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'disabled-slider',
+  path: 'disabledSlider',
   loadChildren: () =>
     import('./views/slider/disabled-slider/disabled-slider.module').then(
       (m) => m.DisabledSliderModule
@@ -840,7 +839,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'discrete-slider',
+  path: 'discreteSlider',
   loadChildren: () =>
     import('./views/slider/discrete-slider/discrete-slider.module').then(
       (m) => m.DiscreteSliderModule
@@ -848,7 +847,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'sized-slider',
+  path: 'sizedSlider',
   loadChildren: () =>
     import('./views/slider/sized-slider/sized-slider.module').then(
       (m) => m.SizedSliderModule
@@ -856,7 +855,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'slider-no-limit-values',
+  path: 'sliderNoLimitValues',
   loadChildren: () =>
     import(
       './views/slider/slider-no-limit-values/slider-no-limit-values.module'
@@ -864,7 +863,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'slider-with-input',
+  path: 'sliderWithInput',
   loadChildren: () =>
     import('./views/slider/slider-with-input/slider-with-input.module').then(
       (m) => m.SliderWithInputModule
@@ -872,87 +871,87 @@ routes.push({
 });
 
 routes.push({
-  path: 'uncontrolled-slider',
+  path: 'uncontrolledSlider',
   loadChildren: () =>
     import(
       './views/slider/uncontrolled-slider/uncontrolled-slider.module'
     ).then((m) => m.UncontrolledSliderModule),
 });
 
-// //Spinner
+//Spinner
 routes.push({
-  path: 'determined-spinner',
+  path: 'determinedSpinner',
   loadChildren: () =>
     import('./views/spinner/determined-spinner/determined-spinner.module').then(
       (m) => m.DeterminedSpinnerModule
     ),
 });
 routes.push({
-  path: 'small-spinner',
+  path: 'smallSpinner',
   loadChildren: () =>
     import('./views/spinner/small-spinner/small-spinner.module').then(
       (m) => m.SmallSpinnerModule
     ),
 });
 routes.push({
-  path: 'spinner-with-overlay',
+  path: 'spinnerWithOverlay',
   loadChildren: () =>
     import(
       './views/spinner/spinner-with-overlay/spinner-with-overlay.module'
     ).then((m) => m.SpinnerWithOverlayModule),
 });
 routes.push({
-  path: 'undetermined-spinner',
+  path: 'undeterminedSpinner',
   loadChildren: () =>
     import(
       './views/spinner/undetermined-spinner/undetermined-spinner.module'
     ).then((m) => m.UndeterminedSpinnerModule),
 });
 
-// //Switch
+//Switch
 routes.push({
-  path: 'controlled-switch',
+  path: 'controlledSwitch',
   loadChildren: () =>
     import('./views/switch/controlled-switch/controlled-switch.module').then(
       (m) => m.ControlledSwitchModule
     ),
 });
 routes.push({
-  path: 'label-position-switch',
+  path: 'labelPositionSwitch',
   loadChildren: () =>
     import(
       './views/switch/label-position-switch/label-position-switch.module'
     ).then((m) => m.LabelPositionSwitchModule),
 });
 routes.push({
-  path: 'uncontrolled-switch',
+  path: 'uncontrolledSwitch',
   loadChildren: () =>
     import(
       './views/switch/uncontrolled-switch/uncontrolled-switch.module'
     ).then((m) => m.UncontrolledSwitchModule),
 });
 
-// //TabbedSection
+//TabbedSection
 routes.push({
-  path: 'default-tabbed-section',
+  path: 'defaultTabbedSection',
   loadChildren: () =>
     import(
       './views/tabbed-section/default-tabbed-section/default-tabbed-section.module'
     ).then((m) => m.DefaultTabbedSectionModule),
 });
 
-// //Table
+//Table
 routes.push({
-  path: 'simple-table',
+  path: 'simpleTable',
   loadChildren: () =>
     import('./views/table/simple-table/simple-table.module').then(
       (m) => m.SimpleTableModule
     ),
 });
 
-// //Tabs
+//Tabs
 routes.push({
-  path: 'add-tabs-dynamically',
+  path: 'addTabsDynamically',
   loadChildren: () =>
     import(
       './views/tabs/add-tabs-dynamically/add-tabs-dynamically.module'
@@ -960,7 +959,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'controlled-tabs',
+  path: 'controlledTabs',
   loadChildren: () =>
     import('./views/tabs/controlled-tabs/controlled-tabs.module').then(
       (m) => m.ControlledTabsModule
@@ -968,7 +967,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'tabs-with-content',
+  path: 'tabsWithContent',
   loadChildren: () =>
     import('./views/tabs/tabs-with-content/tabs-with-content.module').then(
       (m) => m.TabsWithContentModule
@@ -976,16 +975,16 @@ routes.push({
 });
 
 routes.push({
-  path: 'uncontrolled-tabs',
+  path: 'uncontrolledTabs',
   loadChildren: () =>
     import('./views/tabs/uncontrolled-tabs/uncontrolled-tabs.module').then(
       (m) => m.UncontrolledTabsModule
     ),
 });
 
-// //Tags
+//Tags
 routes.push({
-  path: 'basic-tag',
+  path: 'basicTag',
   loadChildren: () =>
     import('./views/tag/basic-tag/basic-tag.module').then(
       (m) => m.BasicTagModule
@@ -993,7 +992,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'sized-tag',
+  path: 'sizedTag',
   loadChildren: () =>
     import('./views/tag/sized-tag/sized-tag.module').then(
       (m) => m.SizedTagModule
@@ -1001,7 +1000,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'tag-with-icon',
+  path: 'tagWithIcon',
   loadChildren: () =>
     import('./views/tag/tag-with-icon/tag-with-icon.module').then(
       (m) => m.TagWithIconModule
@@ -1009,16 +1008,16 @@ routes.push({
 });
 
 routes.push({
-  path: 'tag-with-link',
+  path: 'tagWithLink',
   loadChildren: () =>
     import('./views/tag/tag-with-link/tag-with-link.module').then(
       (m) => m.TagWithLinkModule
     ),
 });
 
-// //TextInput
+//TextInput
 routes.push({
-  path: 'controlled-input',
+  path: 'controlledInput',
   loadChildren: () =>
     import('./views/text-input/controlled-input/controlled-input.module').then(
       (m) => m.ControlledInputModule
@@ -1026,7 +1025,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'disabled-input',
+  path: 'disabledInput',
   loadChildren: () =>
     import('./views/text-input/disabled-input/disabled-input.module').then(
       (m) => m.DisabledInputModule
@@ -1034,7 +1033,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'fill-parent-size-input',
+  path: 'fillParentSizeInput',
   loadChildren: () =>
     import(
       './views/text-input/fill-parent-size-input/fill-parent-size-input.module'
@@ -1042,7 +1041,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'input-with-action',
+  path: 'inputWithAction',
   loadChildren: () =>
     import(
       './views/text-input/input-with-action/input-with-action.module'
@@ -1050,7 +1049,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'input-with-custom-error',
+  path: 'inputWithCustomError',
   loadChildren: () =>
     import(
       './views/text-input/input-with-custom-error/input-with-custom-error.module'
@@ -1058,7 +1057,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'input-with-helper-text',
+  path: 'inputWithHelperText',
   loadChildren: () =>
     import(
       './views/text-input/input-with-helper-text/input-with-helper-text.module'
@@ -1066,7 +1065,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'input-with-length-constraint',
+  path: 'inputWithLengthConstraint',
   loadChildren: () =>
     import(
       './views/text-input/input-with-length-constraint/input-with-length-constraint.module'
@@ -1074,7 +1073,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'input-with-pattern-constraint',
+  path: 'inputWithPatternConstraint',
   loadChildren: () =>
     import(
       './views/text-input/input-with-pattern-constraint/input-with-pattern-constraint.module'
@@ -1082,210 +1081,209 @@ routes.push({
 });
 
 routes.push({
-  path: 'input-with-placeholder',
+  path: 'inputWithPlaceholder',
   loadChildren: () =>
     import(
       './views/text-input/input-with-placeholder/input-with-placeholder.module'
-    ).then((m) => m.InputWithPlaceholderModule), //
+    ).then((m) => m.InputWithPlaceholderModule),
 });
 
 routes.push({
-  path: 'input-with-prefix',
+  path: 'inputWithPrefix',
   loadChildren: () =>
     import(
       './views/text-input/input-with-prefix/input-with-prefix.module'
-    ).then((m) => m.InputWithPrefixModule), //
+    ).then((m) => m.InputWithPrefixModule),
 });
 
 routes.push({
-  path: 'input-with-suffix',
+  path: 'inputWithSuffix',
   loadChildren: () =>
     import(
       './views/text-input/input-with-suffix/input-with-suffix.module'
-    ).then((m) => m.InputWithSuffixModule), //
+    ).then((m) => m.InputWithSuffixModule),
 });
 
 routes.push({
-  path: 'invalid-input',
+  path: 'invalidInput',
   loadChildren: () =>
     import('./views/text-input/invalid-input/invalid-input.module').then(
       (m) => m.InvalidInputModule
-    ), //
+    ),
 });
 
 routes.push({
-  path: 'optional-input',
+  path: 'optionalInput',
   loadChildren: () =>
     import('./views/text-input/optional-input/optional-input.module').then(
       (m) => m.OptionalInputModule
-    ), //
+    ),
 });
 
 routes.push({
-  path: 'uncontrolled-input',
+  path: 'uncontrolledInput',
   loadChildren: () =>
     import(
       './views/text-input/uncontrolled-input/uncontrolled-input.module'
-    ).then((m) => m.UncontrolledInputModule), //
+    ).then((m) => m.UncontrolledInputModule),
 });
 
-// //TextArea
+//TextArea
 routes.push({
-  path: 'controlled-textarea',
+  path: 'controlledTextarea',
   loadChildren: () =>
     import(
       './views/textarea/controlled-textarea/controlled-textarea.module'
-    ).then((m) => m.ControlledTextareaModule), //
+    ).then((m) => m.ControlledTextareaModule),
 });
 
 routes.push({
-  path: 'disabled-textarea',
+  path: 'disabledTextarea',
   loadChildren: () =>
     import('./views/textarea/disabled-textarea/disabled-textarea.module').then(
       (m) => m.DisabledTextareaModule
-    ), //
+    ),
 });
 
 routes.push({
-  path: 'fill-parent-size-textarea',
+  path: 'fillParentSizeTextarea',
   loadChildren: () =>
     import(
       './views/textarea/fill-parent-size-textarea/fill-parent-size-textarea.module'
-    ).then((m) => m.FillParentSizeTextareaModule), //
+    ).then((m) => m.FillParentSizeTextareaModule),
 });
 
 routes.push({
-  path: 'invalid-textarea',
+  path: 'invalidTextarea',
   loadChildren: () =>
     import('./views/textarea/invalid-textarea/invalid-textarea.module').then(
       (m) => m.InvalidTextareaModule
-    ), //
+    ), 
 });
 
 routes.push({
-  path: 'optional-textarea',
+  path: 'optionalTextarea',
   loadChildren: () =>
     import('./views/textarea/optional-textarea/optional-textarea.module').then(
       (m) => m.OptionalTextareaModule
-    ), //
+    ),
 });
 
 routes.push({
-  path: 'textarea-verticalgrow-manual',
+  path: 'textareaVerticalgrowManual',
   loadChildren: () =>
     import(
       './views/textarea/textarea-vertialgrow-manual/textarea-vertialgrow-manual.module'
-    ).then((m) => m.TextareaVertialgrowManualModule), //
+    ).then((m) => m.TextareaVertialgrowManualModule),
 });
 
 routes.push({
-  path: 'textarea-verticalgrow-manual',
+  path: 'textareaVerticalgrowManual',
   loadChildren: () =>
     import(
       './views/textarea/textarea-vertialgrow-none/textarea-vertialgrow-none.module'
-    ).then((m) => m.TextareaVertialgrowNoneModule), //
+    ).then((m) => m.TextareaVertialgrowNoneModule),
 });
 
 routes.push({
-  path: 'textarea-with-custom-error',
+  path: 'textareaWithCustomError',
   loadChildren: () =>
     import(
       './views/textarea/textarea-with-custom-error/textarea-with-custom-error.module'
-    ).then((m) => m.TextareaWithCustomErrorModule), //
+    ).then((m) => m.TextareaWithCustomErrorModule),
 });
 
 routes.push({
-  path: 'textarea-with-default-rows',
+  path: 'textareaWithDefaultRows',
   loadChildren: () =>
     import(
       './views/textarea/textarea-with-default-rows/textarea-with-default-rows.module'
-    ).then((m) => m.TextareaWithDefaultRowsModule), //
+    ).then((m) => m.TextareaWithDefaultRowsModule),
 });
 
 routes.push({
-  path: 'textarea-with-helper-text',
+  path: 'textareaWithHelperText',
   loadChildren: () =>
     import(
       './views/textarea/textarea-with-helper-text/textarea-with-helper-text.module'
-    ).then((m) => m.TextareaWithHelperTextModule), //
+    ).then((m) => m.TextareaWithHelperTextModule),
 });
 
 routes.push({
-  path: 'textarea-with-length-constraint',
+  path: 'textareaWithLengthConstraint',
   loadChildren: () =>
     import(
       './views/textarea/textarea-with-length-constraint/textarea-with-length-constraint.module'
-    ).then((m) => m.TextareaWithLengthConstraintModule), //
+    ).then((m) => m.TextareaWithLengthConstraintModule),
 });
 
 routes.push({
-  path: 'textarea-with-pattern-constraint',
+  path: 'textareaWithPatternConstraint',
   loadChildren: () =>
     import(
       './views/textarea/textarea-with-pattern-constraint/textarea-with-pattern-constraint.module'
-    ).then((m) => m.TextareaWithPatternConstraintModule), //
+    ).then((m) => m.TextareaWithPatternConstraintModule),
 });
 
 routes.push({
-  path: 'textarea-with-placeholder',
+  path: 'textareaWithPlaceholder',
   loadChildren: () =>
     import(
       './views/textarea/textarea-with-placeholder/textarea-with-placeholder.module'
-    ).then((m) => m.TextareaWithPlaceholderModule), //
+    ).then((m) => m.TextareaWithPlaceholderModule),
 });
 
 routes.push({
-  path: 'uncontrolled-textarea',
+  path: 'uncontrolledTextarea',
   loadChildren: () =>
     import(
       './views/textarea/uncontrolled-textarea/uncontrolled-textarea.module'
-    ).then((m) => m.UncontrolledTextareaModule), //
+    ).then((m) => m.UncontrolledTextareaModule),
 });
 
-// //Toogle-Group
-
+//Toogle Group
 routes.push({
-  path: 'basic-toogle-group',
+  path: 'basicToogleGroup',
   loadChildren: () =>
     import(
       './views/toggle-group/basic-toggle-group/basic-toggle-group.module'
-    ).then((m) => m.BasicToggleGroupModule), //
+    ).then((m) => m.BasicToggleGroupModule), 
 });
 
 routes.push({
-  path: 'controlled-toggle-group',
+  path: 'controlledToggleGroup',
   loadChildren: () =>
     import(
       './views/toggle-group/controlled-toggle-group/controlled-toggle-group.module'
-    ).then((m) => m.ControlledToggleGroupModule), //
+    ).then((m) => m.ControlledToggleGroupModule),
 });
 
 routes.push({
-  path: 'disabled-toggle-group',
+  path: 'disabledToggleGroup',
   loadChildren: () =>
     import(
       './views/toggle-group/disabled-toggle-group/disabled-toggle-group.module'
-    ).then((m) => m.DisabledToggleGroupModule), //
+    ).then((m) => m.DisabledToggleGroupModule),
 });
 
 routes.push({
-  path: 'multiple-toggle-group',
+  path: 'multipleToggleGroup',
   loadChildren: () =>
     import(
       './views/toggle-group/multiple-toggle-group/multiple-toggle-group.module'
-    ).then((m) => m.MultipleToggleGroupModule), //
+    ).then((m) => m.MultipleToggleGroupModule),
 });
 
-// //Upload
+//Upload
 routes.push({
-  path: 'default-upload',
+  path: 'defaultUpload',
   loadChildren: () =>
     import('./views/uplodad/default-upload/default-upload.module').then(
       (m) => m.DefaultUploadModule
-    ), //
+    ),
 });
 
-// //V3 Select
+//V3 Select
 routes.push({
   path: 'v3ControlledSelect',
   loadChildren: () =>
@@ -1322,7 +1320,7 @@ routes.push({
     ).then((m) => m.V3WithIconsSelectModule),
 });
 
-// //V3 Textarea
+//V3 Textarea
 routes.push({
   path: 'v3ControlledTextarea',
   loadChildren: () =>
@@ -1366,7 +1364,7 @@ routes.push({
     ).then((m) => m.V3UncontrolledTextareaModule),
 });
 
-// //Select
+//Select
 routes.push({
   path: 'defaultSelect',
   loadChildren: () =>
@@ -1411,9 +1409,8 @@ routes.push({
 });
 
 //Wizard
-
 routes.push({
-  path: 'controlled-wizard',
+  path: 'controlledWizard',
   loadChildren: () =>
     import('./views/wizard/controlled-wizard/controlled-wizard.module').then(
       (m) => m.ControlledWizardModule
@@ -1421,7 +1418,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'uncontrolled-wizard',
+  path: 'uncontrolledWizard',
   loadChildren: () =>
     import(
       './views/wizard/uncontrolled-wizard/uncontrolled-wizard.module'
@@ -1429,7 +1426,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'vertical-wizard',
+  path: 'verticalWizard',
   loadChildren: () =>
     import('./views/wizard/vertical-wizard/vertical-wizard.module').then(
       (m) => m.VerticalWizardModule
