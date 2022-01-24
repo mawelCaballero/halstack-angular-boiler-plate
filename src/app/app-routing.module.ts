@@ -516,7 +516,7 @@ routes.push({
     ).then((m) => m.ControlledInputTextModule),
 });
 routes.push({
-  path: 'fillParentInputText',
+  path: 'controlledInputText',
   loadChildren: () =>
     import(
       './views/input-text/fill-parent-input-text/fill-parent-input-text.module'
@@ -666,6 +666,8 @@ routes.push({
       './views/number-input/uncontrolled-number/uncontrolled-number.module'
     ).then((m) => m.UncontrolledNumberModule),
 });
+
+//Paginator
 
 routes.push({
   path: 'defaultPaginator',

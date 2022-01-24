@@ -16,7 +16,6 @@ const routes: Routes = [
   declarations: [SizedDateComponent],
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     DxcDateModule,
     ThemeModule,
     RouterModule.forChild(routes),

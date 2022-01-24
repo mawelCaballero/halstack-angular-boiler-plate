@@ -15,7 +15,6 @@ const routes: Routes = [
   declarations: [CustomErrorDateInputComponent],
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     DxcDateInputModule,
     ThemeModule,
     RouterModule.forChild(routes),

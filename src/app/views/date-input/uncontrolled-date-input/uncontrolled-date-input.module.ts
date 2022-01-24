@@ -16,7 +16,6 @@ const routes: Routes = [
   imports: [
     CommonModule,
     DxcDateInputModule,
-    BrowserAnimationsModule,
     ThemeModule,
     RouterModule.forChild(routes),
   ],
