@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { ProgressBarWithOverlayComponent } from './progress-bar-with-overlay.component';
-import { DxcButtonModule, DxcProgressbarModule, ThemeModule } from '@dxc-technology/halstack-angular';
+import {
+  DxcButtonModule,
+  DxcProgressbarModule,
+  ThemeModule,
+} from '@dxc-technology/halstack-angular';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [ProgressBarWithOverlayComponent],
@@ -15,7 +18,7 @@ import { CommonModule } from '@angular/common';
         path: '',
         component: ProgressBarWithOverlayComponent,
       },
-    ])
-  ]
+    ]),
+  ],
 })
-export class ProgressBarWithOverlayModule { }
+export class ProgressBarWithOverlayModule {}

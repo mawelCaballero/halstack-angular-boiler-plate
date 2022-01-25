@@ -46,6 +46,7 @@ export class TextInputFunctionSuggestionsComponent implements OnInit {
   }
 
   onChange({ value, error }) {
+    console.log(value);
     this.controlledValue = value;
   }
 
