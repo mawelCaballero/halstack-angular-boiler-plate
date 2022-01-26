@@ -6,10 +6,12 @@ import {
   ThemeModule,
 } from '@dxc-technology/halstack-angular';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [ProgressBarWithOverlayComponent],
   imports: [
+    CommonModule,
     ThemeModule,
     DxcProgressbarModule,
     DxcButtonModule,
