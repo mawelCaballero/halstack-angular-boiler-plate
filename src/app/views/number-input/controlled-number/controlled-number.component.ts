@@ -3,23 +3,20 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './controlled-number.component.html',
-  styleUrls: ['./controlled-number.component.scss']
+  styleUrls: ['./controlled-number.component.scss'],
 })
 export class ControlledNumberComponent implements OnInit {
+  value: string = '';
 
-  value:string = '';
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  onChange(event) {
-    this.value = event;
+  onChange({ value, error }) {
+    this.value = value;
   }
 
   onBlur({ value, error }) {
     this.value = value;
   }
-
 }
