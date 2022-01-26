@@ -516,7 +516,7 @@ routes.push({
     ).then((m) => m.ControlledInputTextModule),
 });
 routes.push({
-  path: 'controlledInputText',
+  path: 'fillParentInputText',
   loadChildren: () =>
     import(
       './views/input-text/fill-parent-input-text/fill-parent-input-text.module'
