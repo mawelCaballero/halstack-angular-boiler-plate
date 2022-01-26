@@ -11,8 +11,8 @@ export class UncontrolledNumberComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onChange(event) {
-    console.log(event);
+  onChange({ value, error }) {
+    console.log(value);
   }
 
   onBlur({ value, error }) {
