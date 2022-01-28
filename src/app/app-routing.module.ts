@@ -1180,7 +1180,7 @@ routes.push({
 });
 
 routes.push({
-  path: 'textareaVerticalgrowManual',
+  path: 'textareaVerticalgrowNone',
   loadChildren: () =>
     import(
       './views/textarea/textarea-vertialgrow-none/textarea-vertialgrow-none.module'
