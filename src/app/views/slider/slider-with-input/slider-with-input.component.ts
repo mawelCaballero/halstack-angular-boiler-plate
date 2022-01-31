@@ -3,16 +3,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './slider-with-input.component.html',
-  styleUrls: ['./slider-with-input.component.scss']
+  styleUrls: ['./slider-with-input.component.scss'],
 })
 export class SliderWithInputComponent implements OnInit {
-
   value: number = 0;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onChange(value) {
     this.value = value;
@@ -20,7 +18,6 @@ export class SliderWithInputComponent implements OnInit {
   }
 
   onDragEnd(value) {
-    console.log("dragEnd: " + value);
+    console.log('dragEnd: ' + value);
   }
-
 }

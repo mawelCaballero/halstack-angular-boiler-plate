@@ -156,6 +156,7 @@ routes.push({
 });
 
 routes.push({ path: '', redirectTo: 'buttonModes', pathMatch: 'full' });
+
 //Button
 routes.push({ path: 'buttonModes', component: ButtonModesComponent });
 routes.push({
@@ -1160,7 +1161,7 @@ routes.push({
   loadChildren: () =>
     import('./views/textarea/invalid-textarea/invalid-textarea.module').then(
       (m) => m.InvalidTextareaModule
-    ), 
+    ),
 });
 
 routes.push({
@@ -1249,7 +1250,7 @@ routes.push({
   loadChildren: () =>
     import(
       './views/toggle-group/basic-toggle-group/basic-toggle-group.module'
-    ).then((m) => m.BasicToggleGroupModule), 
+    ).then((m) => m.BasicToggleGroupModule),
 });
 
 routes.push({
@@ -1434,6 +1435,13 @@ routes.push({
       (m) => m.VerticalWizardModule
     ),
 });
+
+routes.push({
+  path: '404',
+  loadChildren: () =>
+    import('./views/error/error.module').then((m) => m.ErrorModule),
+});
+routes.push({ path: '**', redirectTo: '/404' });
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
