@@ -790,6 +790,15 @@ routes.push({
     ).then((m) => m.RadioUncontrolledModule),
 });
 
+//Radio Group
+routes.push({
+  path: 'radioGroupUncontrolled',
+  loadChildren: () =>
+    import(
+      './views/radio-group/radio-group-uncontrolled/radio-group-uncontrolled.module'
+    ).then((m) => m.RadioGroupUncontrolledModule),
+});
+
 //Resultset Table
 routes.push({
   path: 'defaultResultsetTable',
@@ -1284,87 +1293,6 @@ routes.push({
     import('./views/uplodad/default-upload/default-upload.module').then(
       (m) => m.DefaultUploadModule
     ),
-});
-
-//V3 Select
-routes.push({
-  path: 'v3ControlledSelect',
-  loadChildren: () =>
-    import(
-      './views/v3-select/v3-controlled-select/v3-controlled-select.module'
-    ).then((m) => m.V3ControlledSelectModule),
-});
-routes.push({
-  path: 'v3MultipleSelect',
-  loadChildren: () =>
-    import(
-      './views/v3-select/v3-multiple-select/v3-multiple-select.module'
-    ).then((m) => m.V3MultipleSelectModule),
-});
-routes.push({
-  path: 'v3SizedSelect',
-  loadChildren: () =>
-    import('./views/v3-select/v3-sized-select/v3-sized-select.module').then(
-      (m) => m.V3SizedSelectModule
-    ),
-});
-routes.push({
-  path: 'v3UncontrolledSelect',
-  loadChildren: () =>
-    import(
-      './views/v3-select/v3-uncontrolled-select/v3-uncontrolled-select.module'
-    ).then((m) => m.V3UncontrolledSelectModule),
-});
-routes.push({
-  path: 'v3WithIconsSelect',
-  loadChildren: () =>
-    import(
-      './views/v3-select/v3-with-icons-select/v3-with-icons-select.module'
-    ).then((m) => m.V3WithIconsSelectModule),
-});
-
-//V3 Textarea
-routes.push({
-  path: 'v3ControlledTextarea',
-  loadChildren: () =>
-    import(
-      './views/v3-textarea/v3-controlled-textarea/v3-controlled-textarea.module'
-    ).then((m) => m.V3ControlledTextareaModule),
-});
-routes.push({
-  path: 'v3DisabledTextarea',
-  loadChildren: () =>
-    import(
-      './views/v3-textarea/v3-disabled-textarea/v3-disabled-textarea.module'
-    ).then((m) => m.V3DisabledTextareaModule),
-});
-routes.push({
-  path: 'v3FillParentTextarea',
-  loadChildren: () =>
-    import(
-      './views/v3-textarea/v3-fill-parent-textarea/v3-fill-parent-textarea.module'
-    ).then((m) => m.V3FillParentTextareaModule),
-});
-routes.push({
-  path: 'v3InvalidTextarea',
-  loadChildren: () =>
-    import(
-      './views/v3-textarea/v3-invalid-textarea/v3-invalid-textarea.module'
-    ).then((m) => m.V3InvalidTextareaModule),
-});
-routes.push({
-  path: 'v3RequiredTextarea',
-  loadChildren: () =>
-    import(
-      './views/v3-textarea/v3-required-textarea/v3-required-textarea.module'
-    ).then((m) => m.V3RequiredTextareaModule),
-});
-routes.push({
-  path: 'v3UncontrolledTextarea',
-  loadChildren: () =>
-    import(
-      './views/v3-textarea/v3-uncontrolled-textarea/v3-uncontrolled-textarea.module'
-    ).then((m) => m.V3UncontrolledTextareaModule),
 });
 
 //Select
