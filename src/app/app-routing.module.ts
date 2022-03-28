@@ -799,6 +799,30 @@ routes.push({
     ).then((m) => m.RadioGroupUncontrolledModule),
 });
 
+routes.push({
+  path: 'radioGroupControlled',
+  loadChildren: () =>
+    import(
+      './views/radio-group/radio-group-controlled/radio-group-controlled.module'
+    ).then((m) => m.RadioGroupControlledModule),
+});
+
+routes.push({
+  path: 'radioGroupOptional',
+  loadChildren: () =>
+    import(
+      './views/radio-group/radio-group-optional/radio-group-optional.module'
+    ).then((m) => m.RadioGroupOptionalModule),
+});
+
+routes.push({
+  path: 'radioGroupStacking',
+  loadChildren: () =>
+    import(
+      './views/radio-group/radio-group-stacking/radio-group-stacking.module'
+    ).then((m) => m.RadioGroupStackingModule),
+});
+
 //Resultset Table
 routes.push({
   path: 'defaultResultsetTable',

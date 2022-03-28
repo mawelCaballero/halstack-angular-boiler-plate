@@ -1,0 +1,24 @@
+<div
+  theme
+  style="
+    display: 'flex';
+    flex-wrap: 'wrap';
+    column-gap: '100px';
+    margin: '36px';
+  "
+>
+  <dxc-radio-group
+    [options]="options"
+    label="Optional"
+    helperText="Adds a predefined option whose value is the empty string"
+    [optional]="true"
+  ></dxc-radio-group>
+
+  <dxc-radio-group
+    label="Custom optional"
+    helperText="You can customize the label of the optional item to suit bettter your context"
+    [options]="options"
+    [optional]="true"
+    optionalItemLabel="Decide later"
+  ></dxc-radio-group>
+</div>
