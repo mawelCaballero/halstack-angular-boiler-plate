@@ -3,19 +3,15 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './custom-error-password.component.html',
-  styleUrls: ['./custom-error-password.component.scss']
+  styleUrls: ['./custom-error-password.component.scss'],
 })
 export class CustomErrorPasswordComponent implements OnInit {
+  value = '';
+  errorMessage: string = '';
 
+  constructor() {}
 
-  value = "";
-  length = { min: 5, max: 10 };
-  errorMessage:string =  '';
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onChange({ value, error }) {
     this.value = value;
@@ -23,7 +19,6 @@ export class CustomErrorPasswordComponent implements OnInit {
 
   onBlur({ value, error }) {
     this.value = value;
-    error ? (this.errorMessage = "Custom error") : (this.errorMessage = null);
+    error ? (this.errorMessage = 'Custom error') : (this.errorMessage = null);
   }
-
 }

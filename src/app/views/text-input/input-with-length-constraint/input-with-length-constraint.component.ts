@@ -3,18 +3,15 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './input-with-length-constraint.component.html',
-  styleUrls: ['./input-with-length-constraint.component.scss']
+  styleUrls: ['./input-with-length-constraint.component.scss'],
 })
 export class InputWithLengthConstraintComponent implements OnInit {
-
-  controlledValue = "";
-  length = { min: 5, max: 10 };
-  error = "";
+  controlledValue = '';
+  error = '';
 
   constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onBlur({ value, error }) {
     this.controlledValue = value;
@@ -25,5 +22,4 @@ export class InputWithLengthConstraintComponent implements OnInit {
     this.controlledValue = value;
     this.error = error;
   }
-
 }

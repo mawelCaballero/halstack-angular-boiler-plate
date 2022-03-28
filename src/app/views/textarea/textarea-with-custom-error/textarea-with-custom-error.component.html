@@ -5,7 +5,8 @@
     (onChange)="onChange($event)"
     (onBlur)="onBlur($event)"
     pattern='^.*(?=.*[a-zA-Z])(?=.*)(?=.*[!&$%&? "]).*$'
-    [length]="length"
+    minLength="5"
+    maxLength="10"
     [error]="errorMessage"
     margin="medium"
   >
