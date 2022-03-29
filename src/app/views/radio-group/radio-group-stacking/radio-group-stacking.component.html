@@ -1,0 +1,23 @@
+<div
+  theme
+  style="
+    display: 'flex';
+    flex-wrap: 'wrap';
+    column-gap: '100px';
+    margin: '36px';
+  "
+>
+  <dxc-radio-group
+    label="Column (default)"
+    helperText="By default, stacking is set to column"
+    [options]="options"
+    stacking="column"
+  ></dxc-radio-group>
+
+  <dxc-radio-group
+    label="Row"
+    helperText="But with the prop 'stacking' you can make the options display in a row"
+    [options]="options"
+    stacking="row"
+  ></dxc-radio-group>
+</div>
