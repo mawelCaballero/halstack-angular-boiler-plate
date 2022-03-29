@@ -24,16 +24,15 @@ export class RadioGroupUncontrolledComponent implements OnInit {
     {
       label: 'Label1',
       value: '1',
-      disabled: true,
     },
     {
       label: 'Label2',
       value: '2',
+      disabled: true,
     },
     {
       label: 'Label3',
       value: '3',
-      disabled: true,
     },
   ];
 
