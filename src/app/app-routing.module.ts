@@ -808,6 +808,14 @@ routes.push({
 });
 
 routes.push({
+  path: 'radioGroupError',
+  loadChildren: () =>
+    import(
+      './views/radio-group/radio-group-error/radio-group-error.module'
+    ).then((m) => m.RadioGroupErrorModule),
+});
+
+routes.push({
   path: 'radioGroupOptional',
   loadChildren: () =>
     import(

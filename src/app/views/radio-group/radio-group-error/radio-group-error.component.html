@@ -1,0 +1,32 @@
+<div
+  theme
+  style="
+    display: 'flex';
+    flex-wrap: 'no-wrap';
+    column-gap: '100px';
+    margin: '36px';
+  "
+>
+  <dxc-radio-group
+    label="Error as &#34;&#34;"
+    helperText="empty space place of error"
+    [options]="options"
+    error=""
+    stacking="row"
+  ></dxc-radio-group>
+
+  <dxc-radio-group
+    label="Error as truthy value"
+    helperText="error message"
+    [options]="options"
+    error="Error Message"
+    stacking="row"
+  ></dxc-radio-group>
+
+  <dxc-radio-group
+    label="Error as undefined value"
+    helperText="No space available"
+    [options]="options"
+    stacking="row"
+  ></dxc-radio-group>
+</div>
